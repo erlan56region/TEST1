@@ -1194,7 +1194,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Загородный дом">
+                        <img src="data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Загородный дом в Оренбурге</h3>
@@ -1483,7 +1483,7 @@
                     name: "АКВАЛОС 2 Un*",
                     description: "Автономная канализация для дома и дачи",
                     price: "101 000 ₽",
-                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    image: "data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 400л/сут", "Залповый сброс: 120л", "Глубина подводящей трубы: до 30 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1493,7 +1493,7 @@
                     name: "АКВАЛОС 3 Un*",
                     description: "Автономная канализация для частного дома",
                     price: "113 000 ₽",
-                    image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    image: data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 600л/сут", "Залповый сброс: 200л", "Глубина подводящей трубы: до 50 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1503,7 +1503,7 @@
                     name: "АКВАЛОС 4 Un*",
                     description: "Автономная канализация для загородного дома",
                     price: "129 000 ₽",
-                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    image: "data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 800л/сут", "Залповый сброс: 230л", "Глубина подводящей трубы: до 60 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1513,7 +1513,7 @@
                     name: "АКВАЛОС 5 Un*",
                     description: "Автономная канализация для большого дома",
                     price: "141 000 ₽",
-                    image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    image: "data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 900л/сут", "Залповый сброс: 320л", "Глубина подводящей трубы: до 60 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1523,7 +1523,7 @@
                     name: "АКВАЛОС 7 Un*",
                     description: "Автономная канализация повышенной производительности",
                     price: "171 000 ₽",
-                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    image: "data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 1200л/сут", "Залповый сброс: 500л", "Глубина подводящей трубы: до 60 см"],
                     category: "vertical",
                     badge: "Универсальная"
