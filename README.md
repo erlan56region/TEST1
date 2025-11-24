@@ -1,5 +1,4 @@
-Сайт в разработке 1.3
-
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -124,6 +123,7 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
+            text-decoration: none;
         }
         
         .logo i {
@@ -181,6 +181,7 @@
             color: var(--dark);
             transition: var(--transition);
             cursor: pointer;
+            text-decoration: none;
         }
         
         .phone:hover {
@@ -1022,13 +1023,13 @@
     <header id="header">
         <div class="container">
             <div class="header-inner">
-                <div class="logo">
+                <a href="#hero" class="logo">
                     <i class="fas fa-tint"></i>
                     <div>
                         ИП Рахметов А.К.
                         <div class="logo-subtitle">ИНН 561902398552</div>
                     </div>
-                </div>
+                </a>
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -1040,10 +1041,10 @@
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
-                <div class="phone">
+                <a href="tel:+735321234567" class="phone">
                     <i class="fas fa-phone"></i>
                     +7 (3532) 123-45-67
-                </div>
+                </a>
             </div>
             <nav class="mobile-nav" id="mobileNav">
                 <ul>
@@ -1271,11 +1272,11 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <div>+7 (3532) 123-45-67</div>
+                        <div><a href="tel:+735321234567" style="color: inherit; text-decoration: none;">+7 (3532) 123-45-67</a></div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <div>info@rahmetov-orenburg.ru</div>
+                        <div><a href="mailto:info@rahmetov-orenburg.ru" style="color: inherit; text-decoration: none;">info@rahmetov-orenburg.ru</a></div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
@@ -1345,8 +1346,8 @@
                     <ul>
                         <li><strong>ИП Рахметов А.К.</strong></li>
                         <li>ИНН: 561902398552</li>
-                        <li>+7 (3532) 123-45-67</li>
-                        <li>info@rahmetov-orenburg.ru</li>
+                        <li><a href="tel:+735321234567" style="color: inherit; text-decoration: none;">+7 (3532) 123-45-67</a></li>
+                        <li><a href="mailto:info@rahmetov-orenburg.ru" style="color: inherit; text-decoration: none;">info@rahmetov-orenburg.ru</a></li>
                         <li>г. Оренбург, ул. Примерная, д. 123</li>
                         <li>Работаем по Оренбургу и области</li>
                     </ul>
@@ -1473,7 +1474,9 @@
             // Скрытие анимации загрузки
             const loadingAnimation = document.getElementById('loadingAnimation');
             setTimeout(() => {
-                loadingAnimation.classList.add('hidden');
+                if (loadingAnimation) {
+                    loadingAnimation.classList.add('hidden');
+                }
             }, 1000);
 
             // Инициализация базовой функциональности
@@ -1507,15 +1510,20 @@
                 });
             }
             
-            // Плавная прокрутка
+            // Плавная прокрутка для всех ссылок с якорями
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
+                    // Исключаем ссылки, которые не ведут к секциям (например, телефонные номера)
+                    if (this.getAttribute('href') === '#') return;
+                    
                     e.preventDefault();
                     const targetId = this.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
                     
                     if (targetElement) {
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 70;
+                        const headerHeight = document.getElementById('header').offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        
                         window.scrollTo({
                             top: targetPosition,
                             behavior: 'smooth'
@@ -1551,6 +1559,18 @@
                 isDarkTheme = !isDarkTheme;
                 localStorage.setItem('darkTheme', isDarkTheme);
                 applyTheme();
+                
+                // Анимация переключателя
+                if (themeToggle && typeof gsap !== 'undefined') {
+                    gsap.fromTo(themeToggle, {
+                        scale: 1
+                    }, {
+                        scale: 1.2,
+                        duration: 0.2,
+                        yoyo: true,
+                        repeat: 1
+                    });
+                }
             }
             
             if (themeToggle && themeIcon) {
@@ -1566,22 +1586,29 @@
             if (catalogBtn) {
                 catalogBtn.addEventListener('click', (e) => {
                     e.preventDefault();
-                    modal.classList.add('active');
+                    if (modal) {
+                        modal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    }
                 });
             }
             
-            if (closeModal) {
+            if (closeModal && modal) {
                 closeModal.addEventListener('click', () => {
                     modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
                 });
             }
             
             // Закрытие по клику вне модального окна
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    modal.classList.remove('active');
-                }
-            });
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
             
             // Формы
             const contactForm = document.getElementById('contact-form');
@@ -1619,19 +1646,14 @@
                     
                     setTimeout(() => {
                         quickForm.reset();
-                        modal.classList.remove('active');
+                        if (modal) {
+                            modal.classList.remove('active');
+                            document.body.style.overflow = 'auto';
+                        }
                         showNotification("Заявка на консультацию отправлена! Мы перезвоним вам в течение 15 минут.");
                     }, 500);
                 });
             }
-            
-            // Телефонный номер
-            document.querySelectorAll('.phone').forEach(phoneElement => {
-                phoneElement.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    window.location.href = 'tel:+735321234567';
-                });
-            });
             
             // Обработка скролла для шапки
             const header = document.getElementById('header');
@@ -1645,6 +1667,16 @@
                     }
                 });
             }
+            
+            // Закрытие мобильного меню при ресайзе
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768 && mobileNav) {
+                    mobileNav.classList.remove('active');
+                    if (mobileMenuBtn) {
+                        mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                    }
+                }
+            });
         }
 
         // Инициализация каталога
@@ -1695,7 +1727,9 @@
             const filterButtons = document.querySelectorAll('.catalog-filter-btn');
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
+                    // Убираем активный класс у всех кнопок
                     filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Добавляем активный класс текущей кнопке
                     button.classList.add('active');
                     
                     const filter = button.getAttribute('data-filter');
@@ -1710,6 +1744,7 @@
             productCards.forEach(card => {
                 if (filter === 'all' || card.getAttribute('data-category') === filter) {
                     card.style.display = 'block';
+                    // Анимация появления
                     if (typeof gsap !== 'undefined') {
                         gsap.fromTo(card, {
                             opacity: 0,
@@ -1722,6 +1757,7 @@
                         });
                     }
                 } else {
+                    // Анимация скрытия
                     if (typeof gsap !== 'undefined') {
                         gsap.to(card, {
                             opacity: 0,
@@ -1749,13 +1785,16 @@
                         e.stopPropagation();
                         const productId = parseInt(button.getAttribute('data-product-id'));
                         if (button.classList.contains('btn-outline')) {
+                            // Заказ товара
                             orderProduct(productId);
                         } else {
+                            // Просмотр подробной информации
                             viewProductDetails(productId);
                         }
                     });
                 });
                 
+                // Клик по карточке товара
                 card.addEventListener('click', () => {
                     const productId = parseInt(card.querySelector('.btn').getAttribute('data-product-id'));
                     viewProductDetails(productId);
@@ -1776,11 +1815,13 @@
                 
                 if (!modal || !modalIcon || !modalName || !modalPrice || !modalDescription || !modalSpecs) return;
                 
+                // Заполнение модального окна данными товара
                 modalIcon.className = product.icon;
                 modalName.textContent = product.name;
                 modalPrice.textContent = product.price;
                 modalDescription.textContent = product.fullDescription;
                 
+                // Очистка и заполнение спецификаций
                 modalSpecs.innerHTML = '';
                 product.specifications.forEach(spec => {
                     const li = document.createElement('li');
@@ -1791,9 +1832,11 @@
                     modalSpecs.appendChild(li);
                 });
                 
+                // Анимация открытия модального окна
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
                 
+                // Анимация появления контента в модальном окне
                 if (typeof gsap !== 'undefined') {
                     gsap.fromTo('.product-modal-content', {
                         scale: 0.8,
@@ -1812,8 +1855,12 @@
         function orderProduct(productId) {
             const product = products.find(p => p.id === productId);
             if (product) {
+                // Открытие модального окна заказа
                 const modal = document.getElementById('modal');
-                modal.classList.add('active');
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
             }
         }
         
@@ -1826,28 +1873,39 @@
             
             if (!modal || !closeButton || !orderButton || !consultButton) return;
             
+            // Закрытие модального окна
             closeButton.addEventListener('click', () => {
                 closeProductModal();
             });
             
+            // Заказ товара из модального окна
             orderButton.addEventListener('click', () => {
                 closeProductModal();
                 const modal = document.getElementById('modal');
-                modal.classList.add('active');
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
             });
             
+            // Консультация по товару
             consultButton.addEventListener('click', () => {
                 closeProductModal();
                 const modal = document.getElementById('modal');
-                modal.classList.add('active');
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
             });
             
+            // Закрытие по клику вне модального окна
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
                     closeProductModal();
                 }
             });
             
+            // Закрытие по клавише Escape
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape' && modal.classList.contains('active')) {
                     closeProductModal();
@@ -1859,6 +1917,7 @@
         function closeProductModal() {
             const modal = document.getElementById('productModal');
             if (modal) {
+                // Анимация закрытия модального окна
                 if (typeof gsap !== 'undefined') {
                     gsap.to(modal.querySelector('.product-modal-content'), {
                         scale: 0.8,
@@ -1885,6 +1944,7 @@
             notification.textContent = message;
             notification.classList.add('show');
             
+            // Анимация появления уведомления
             if (typeof gsap !== 'undefined') {
                 gsap.fromTo(notification, {
                     x: 150
@@ -1896,6 +1956,7 @@
             }
             
             setTimeout(() => {
+                // Анимация скрытия уведомления
                 if (typeof gsap !== 'undefined') {
                     gsap.to(notification, {
                         x: 150,
@@ -1913,11 +1974,13 @@
 
         // Инициализация GSAP анимаций
         function initAnimations() {
+            // Проверяем, загружена ли GSAP
             if (typeof gsap === 'undefined') {
                 console.warn('GSAP не загружен');
                 return;
             }
             
+            // Инициализация ScrollTrigger
             if (typeof ScrollTrigger !== 'undefined') {
                 gsap.registerPlugin(ScrollTrigger);
             } else {
@@ -1925,7 +1988,7 @@
                 return;
             }
             
-            // Анимация появления секций
+            // Анимация появления секций при скролле
             const sections = document.querySelectorAll('section');
             if (sections.length > 0) {
                 sections.forEach(section => {
@@ -2011,6 +2074,85 @@
                     });
                 });
             }
+            
+            // Анимация элементов "О компании"
+            const aboutImg = document.querySelector('.about-img');
+            const aboutContent = document.querySelector('.about-content');
+            if (aboutImg && aboutContent) {
+                gsap.fromTo(aboutImg, {
+                    opacity: 0,
+                    x: -50
+                }, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: '.about',
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                });
+                
+                gsap.fromTo(aboutContent, {
+                    opacity: 0,
+                    x: 50
+                }, {
+                    opacity: 1,
+                    x: 0,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: '.about',
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                });
+            }
+            
+            // Анимация статистики
+            const statItems = document.querySelectorAll('.stat-item');
+            if (statItems.length > 0) {
+                statItems.forEach((item, i) => {
+                    gsap.fromTo(item, {
+                        opacity: 0,
+                        y: 30
+                    }, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        delay: i * 0.2,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: '.stats',
+                            start: "top 80%",
+                            toggleActions: "play none none none"
+                        }
+                    });
+                });
+            }
+            
+            // Анимация контактных блоков
+            const contactInfos = document.querySelectorAll('.contact-info');
+            if (contactInfos.length > 0) {
+                contactInfos.forEach((info, i) => {
+                    gsap.fromTo(info, {
+                        opacity: 0,
+                        y: 50
+                    }, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.8,
+                        delay: i * 0.2,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: '.contacts-grid',
+                            start: "top 80%",
+                            toggleActions: "play none none none"
+                        }
+                    });
+                });
+            }
         }
 
         // Анимация счетчиков
@@ -2045,6 +2187,7 @@
                     }
                 });
             } else {
+                // Fallback если GSAP не загружен
                 let current = start;
                 const increment = (end - start) / (duration / 16);
                 const timer = setInterval(() => {
