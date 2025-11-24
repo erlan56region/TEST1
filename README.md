@@ -1,4 +1,6 @@
-В разработке 6.0
+Разработка 6.0
+
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -948,8 +950,10 @@
         
         .loading-text {
             color: var(--primary);
-            font-size: 16px;
-            font-weight: 500;
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
         }
         
         .progress-bar {
@@ -1076,7 +1080,7 @@
 <body>
     <div class="loading-animation" id="loadingAnimation">
         <div class="loader"></div>
-        <div class="loading-text">Загрузка...</div>
+        <div class="loading-text">АКВАЛОС</div>
         <div class="progress-bar">
             <div class="progress" id="loadingProgress"></div>
         </div>
@@ -1170,7 +1174,270 @@
         </div>
     </section>
 
-    <!-- Остальные секции остаются без изменений -->
+    <section id="catalog" class="catalog-section">
+        <div class="container">
+            <h2>Каталог автономных канализаций Аквалос</h2>
+            <p class="section-subtitle">Выберите оптимальное решение для вашего объекта из нашего каталога</p>
+            <div class="catalog-filters">
+                <button class="catalog-filter-btn active" data-filter="all">Все модели</button>
+                <button class="catalog-filter-btn" data-filter="vertical">Вертикальные</button>
+                <button class="catalog-filter-btn" data-filter="horizontal">Горизонтальные</button>
+            </div>
+            <div class="catalog-grid" id="catalogGrid">
+                <!-- Товары загружаются через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2>Примеры выполненных работ</h2>
+            <p class="section-subtitle">Реализованные проекты автономных канализационных систем для частных домов и коммерческих объектов</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Загородный дом">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Загородный дом в Оренбурге</h3>
+                        <p>Установка АКВАЛОС 10 Un* для дома площадью 250 м²</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Коттедж">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Коттеджный поселок</h3>
+                        <p>Комплексное решение для 8 домов в Оренбургской области</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Ресторан">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Ресторан в Оренбурге</h3>
+                        <p>Установка промышленной системы очистки</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantages-section">
+        <div class="container">
+            <h2>17 преимуществ септика Аквалос</h2>
+            <p class="section-subtitle">Почему наши клиенты выбирают автономные канализации Аквалос для своих объектов</p>
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <i class="fas fa-ruble-sign"></i>
+                    <h3>Оптимальное соотношение цена - качество</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-warehouse"></i>
+                    <h3>Постоянное наличие на складе</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Три рабочих дня до пользования станцией</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Малое электропотребление</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Отсутствие часто ломающихся устройств</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-power-off"></i>
+                    <h3>Работает при отсутствии электроэнергии (до 7 суток)</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-wind"></i>
+                    <h3>Полное отсутствие запаха</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>Работа при любых экстремальных погодных условиях</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Гарантия на корпус 50 лет</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-tint"></i>
+                    <h3>Нечувствительность к пиковым потокам</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-filter"></i>
+                    <h3>Степень очистки 96-98%</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-flask"></i>
+                    <h3>Не используются химические вещества</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-user-cog"></i>
+                    <h3>Самостоятельное обслуживание</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-volume-mute"></i>
+                    <h3>Низкий уровень шума</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Возможность оплаты после сдачи объекта</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-truck-loading"></i>
+                    <h3>Не нужна ассенизаторская машина</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Простота переоборудования</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="О компании">
+                </div>
+                <div class="about-content">
+                    <h2>О компании</h2>
+                    <p><strong>ИП Рахметов А.К.</strong> (ИНН 561902398552) специализируется на установке автономных канализационных систем с 2010 года. Мы являемся официальными дилерами систем Аквалос в Оренбурге и Оренбургской области.</p>
+                    <p>Наша команда состоит из опытных специалистов, которые используют современное оборудование и материалы для обеспечения высокого качества работ.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="yearsCounter">0</span>
+                            <span class="stat-text">Лет опыта</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="projectsCounter">0</span>
+                            <span class="stat-text">Установленных систем</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="clientsCounter">0</span>
+                            <span class="stat-text">Довольных клиентов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p class="section-subtitle">Свяжитесь с нами для получения бесплатной консультации и расчета стоимости автономной канализации для вашего объекта</p>
+            <div class="contacts-grid">
+                <div class="contact-info">
+                    <h3>Контактная информация</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-user-tie"></i>
+                        <div><strong>ИП Рахметов А.К.</strong></div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-id-card"></i>
+                        <div>ИНН: 561902398552</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>г. Оренбург, ул. Примерная, д. 123</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>+7 (3532) 123-45-67</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>info@rahmetov-orenburg.ru</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>Пн-Пт: 9:00-18:00</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <div>Работаем по всему Оренбургу и области</div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://vk.com" target="_blank"><i class="fab fa-vk"></i></a>
+                        <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://wa.me/735321234567" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h3>Форма обратной связи</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Ваш телефон</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Ваш населенный пункт</label>
+                            <input type="text" id="location" class="form-control" placeholder="Оренбург или область">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Интересует автономная канализация Аквалос..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-premium">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#portfolio">Примеры работ</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#services">Автономная канализация</a></li>
+                        <li><a href="#services">Монтаж септиков</a></li>
+                        <li><a href="#services">Обслуживание</a></li>
+                        <li><a href="#services">Консультации</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><strong>ИП Рахметов А.К.</strong></li>
+                        <li>ИНН: 561902398552</li>
+                        <li>+7 (3532) 123-45-67</li>
+                        <li>info@rahmetov-orenburg.ru</li>
+                        <li>г. Оренбург, ул. Примерная, д. 123</li>
+                        <li>Работаем по Оренбургу и области</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 ИП Рахметов А.К. (ИНН 561902398552). Все права защищены. Обслуживаем Оренбург и Оренбургскую область.
+            </div>
+        </div>
+    </footer>
 
     <div class="theme-toggle" id="themeToggle">
         <i class="fas fa-moon" id="themeIcon"></i>
@@ -1208,7 +1475,6 @@
             }, 100);
         });
 
-        // Остальной JavaScript код остается без изменений
         function initCatalog() {
             const catalogGrid = document.getElementById('catalogGrid');
             if (!catalogGrid) return;
