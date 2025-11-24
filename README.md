@@ -1,4 +1,4 @@
-Разработка 3.0
+РАЗРАБОТКА 4.0
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#0c1a2a">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>AquaLux Elite - Премиум автономные канализации для элитной недвижимости</title>
+    <title>ИП Рахметов А.К. - Премиум автономные канализации Аквалос</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -31,7 +31,6 @@
             --gold-gradient: linear-gradient(135deg, #c9a96e 0%, #e6c260 50%, #f7d87c 100%);
         }
         
-        /* Темная тема */
         .dark-theme {
             --primary: #1a2d45;
             --primary-dark: #0c1a2a;
@@ -127,11 +126,6 @@
             box-shadow: 0 10px 25px rgba(201, 169, 110, 0.4);
         }
         
-        .btn-premium:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 18px 35px rgba(201, 169, 110, 0.5);
-        }
-        
         section {
             padding: 120px 0;
         }
@@ -165,7 +159,6 @@
             line-height: 1.6;
         }
         
-        /* Переключатель темы */
         .theme-toggle {
             position: fixed;
             bottom: 30px;
@@ -189,7 +182,6 @@
             transform: scale(1.1) rotate(15deg);
         }
         
-        /* Шапка */
         header {
             background-color: rgba(12, 26, 42, 0.95);
             backdrop-filter: blur(10px);
@@ -307,7 +299,6 @@
             color: var(--white);
         }
         
-        /* Мобильная навигация */
         .mobile-nav {
             display: none;
             width: 100%;
@@ -343,9 +334,8 @@
             color: var(--secondary);
         }
         
-        /* Герой секция */
         .hero {
-            background: linear-gradient(rgba(12, 26, 42, 0.9), rgba(12, 26, 42, 0.95)), url('https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(12, 26, 42, 0.9), rgba(12, 26, 42, 0.95)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
             color: var(--white);
             text-align: center;
             padding: 240px 0 160px;
@@ -395,7 +385,6 @@
             flex-wrap: wrap;
         }
         
-        /* Услуги */
         .services {
             background-color: var(--light);
             position: relative;
@@ -467,7 +456,6 @@
             line-height: 1.6;
         }
         
-        /* Каталог */
         .catalog-section {
             padding: 120px 0;
             background: var(--gradient);
@@ -642,7 +630,6 @@
             font-size: 16px;
         }
         
-        /* Примеры работ */
         .portfolio-section {
             padding: 120px 0;
             background-color: var(--light);
@@ -727,7 +714,6 @@
             line-height: 1.6;
         }
         
-        /* Секция преимуществ */
         .advantages-section {
             padding: 120px 0;
             background: var(--gradient);
@@ -796,7 +782,6 @@
             color: var(--white);
         }
         
-        /* О компании */
         .about-section {
             padding: 120px 0;
             background-color: var(--light);
@@ -881,7 +866,6 @@
             font-weight: 500;
         }
         
-        /* Контакты */
         .contacts {
             padding: 120px 0;
             background: var(--gradient);
@@ -983,7 +967,6 @@
             color: rgba(255,255,255,0.6);
         }
         
-        /* Подвал */
         footer {
             background-color: var(--dark);
             color: var(--white);
@@ -1071,7 +1054,6 @@
             color: rgba(255, 255, 255, 0.6);
         }
         
-        /* Анимация загрузки */
         .loading-animation {
             position: fixed;
             top: 0;
@@ -1113,7 +1095,6 @@
             to { transform: rotate(360deg); }
         }
         
-        /* Адаптивность */
         @media (max-width: 1200px) {
             .container {
                 max-width: 1140px;
@@ -1234,144 +1215,112 @@
             .section-subtitle {
                 font-size: 16px;
             }
-            
-            .product-modal-body {
-                flex-direction: column;
-            }
-            
-            .product-modal-img {
-                height: 200px;
-                min-width: 100%;
-            }
-            
-            .product-modal-info {
-                min-width: 100%;
-                padding: 20px;
-            }
-            
-            .product-modal-actions {
-                flex-direction: column;
-            }
-            
-            .contact-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .contact-item i {
-                margin-bottom: 5px;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Анимация загрузки -->
     <div class="loading-animation" id="loadingAnimation">
         <div class="loader"></div>
-        <div class="loading-text">AQUALUX ELITE</div>
+        <div class="loading-text">АКВАЛОС ПРЕМИУМ</div>
     </div>
 
-    <!-- Шапка -->
     <header id="header">
         <div class="container">
             <div class="header-inner">
                 <div class="logo">
-                    <i class="fas fa-water"></i>
+                    <i class="fas fa-tint"></i>
                     <div>
-                        AquaLux Elite
-                        <div class="logo-subtitle">ПРЕМИУМ РЕШЕНИЯ ДЛЯ ЭЛИТНОЙ НЕДВИЖИМОСТИ</div>
+                        ИП Рахметов А.К.
+                        <div class="logo-subtitle">ПРЕМИУМ АВТОНОМНЫЕ КАНАЛИЗАЦИИ</div>
                     </div>
                 </div>
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
                 <nav class="desktop-nav">
                     <ul>
                         <li><a href="#services">Услуги</a></li>
                         <li><a href="#catalog">Каталог</a></li>
-                        <li><a href="#portfolio">Проекты</a></li>
-                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#portfolio">Примеры работ</a></li>
+                        <li><a href="#about">О компании</a></li>
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="phone">
                     <i class="fas fa-phone"></i>
-                    +7 (495) 123-45-67
+                    +7 (3532) 123-45-67
                 </div>
             </div>
             <nav class="mobile-nav" id="mobileNav">
                 <ul>
                     <li><a href="#services">Услуги</a></li>
                     <li><a href="#catalog">Каталог</a></li>
-                    <li><a href="#portfolio">Проекты</a></li>
-                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#portfolio">Примеры работ</a></li>
+                    <li><a href="#about">О компании</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Герой секция -->
     <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>ЭКСКЛЮЗИВНЫЕ АВТОНОМНЫЕ КАНАЛИЗАЦИИ ДЛЯ ВАШЕЙ РЕЗИДЕНЦИИ</h1>
-                <p>Инженерные решения премиум-класса для загородных резиденций, элитных коттеджей и коммерческих объектов. Бескомпромиссное качество и полная автоматизация.</p>
+                <h1>АВТОНОМНЫЕ КАНАЛИЗАЦИИ АКВАЛОС ПРЕМИУМ</h1>
+                <p>Профессиональные системы биологической очистки сточных вод для загородного дома и дачи в Оренбурге и Оренбургской области</p>
                 <div class="hero-buttons">
-                    <a href="#catalog" class="btn btn-premium">СМОТРЕТЬ КАТАЛОГ</a>
-                    <a href="#contacts" class="btn btn-outline">КОНСУЛЬТАЦИЯ ЭКСПЕРТА</a>
+                    <a href="#catalog" class="btn btn-premium">Смотреть каталог</a>
+                    <a href="#contacts" class="btn btn-outline">Бесплатная консультация</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Услуги -->
     <section id="services" class="services">
         <div class="container">
-            <h2>ЭКСКЛЮЗИВНЫЕ УСЛУГИ</h2>
-            <p class="section-subtitle">Мы предлагаем полный комплекс премиальных услуг по проектированию, установке и обслуживанию автономных канализационных систем для объектов высшего класса</p>
+            <h2>Наши услуги</h2>
+            <p class="section-subtitle">Мы предлагаем полный комплекс услуг по установке и обслуживанию автономных канализационных систем премиум-класса</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Проектирование и монтаж">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Монтаж автономной канализации">
                     </div>
                     <div class="service-content">
-                        <h3>ИНДИВИДУАЛЬНОЕ ПРОЕКТИРОВАНИЕ</h3>
-                        <p>Разработка эксклюзивных инженерных решений с учетом архитектурных особенностей вашей резиденции и ландшафта территории.</p>
+                        <h3>Монтаж автономной канализации</h3>
+                        <p>Профессиональная установка септиков Аквалос для частных домов, дач и коммерческих объектов в Оренбурге и области.</p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="VIP обслуживание">
+                        <img src="https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Обслуживание септиков">
                     </div>
                     <div class="service-content">
-                        <h3>VIP ОБСЛУЖИВАНИЕ</h3>
-                        <p>Круглосуточный сервис премиум-класса с выездом специалистов в течение 2 часов и гарантией на все виды работ.</p>
+                        <h3>Обслуживание септиков</h3>
+                        <p>Регулярное обслуживание, чистка и ремонт автономных канализационных систем Аквалос.</p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1581094794368-3fbb8f2e7b38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Умные системы">
+                        <img src="https://images.unsplash.com/photo-1581094794368-3fbb8f2e7b38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Доставка и установка">
                     </div>
                     <div class="service-content">
-                        <h3>УМНЫЕ ТЕХНОЛОГИИ</h3>
-                        <p>Интеграция систем в умный дом с возможностью удаленного мониторинга и управления через мобильное приложение.</p>
+                        <h3>Доставка и установка</h3>
+                        <p>Быстрая доставка и профессиональный монтаж септиков Аквалос в Оренбурге и Оренбургской области.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Каталог -->
     <section id="catalog" class="catalog-section">
         <div class="container">
-            <h2>ЭКСКЛЮЗИВНЫЕ РЕШЕНИЯ</h2>
-            <p class="section-subtitle">Индивидуально разработанные системы для объектов высшего класса с безупречной эстетикой и максимальной эффективностью</p>
+            <h2>Каталог автономных канализаций Аквалос</h2>
+            <p class="section-subtitle">Выберите оптимальное решение для вашего объекта из нашего каталога элитных автономных канализационных систем</p>
             <div class="catalog-filters">
-                <button class="catalog-filter-btn active" data-filter="all">ВСЕ СИСТЕМЫ</button>
-                <button class="catalog-filter-btn" data-filter="residential">ДЛЯ РЕЗИДЕНЦИЙ</button>
-                <button class="catalog-filter-btn" data-filter="commercial">ДЛЯ КОММЕРЦИИ</button>
-                <button class="catalog-filter-btn" data-filter="premium">ПРЕМИУМ КОЛЛЕКЦИЯ</button>
+                <button class="catalog-filter-btn active" data-filter="all">Все модели</button>
+                <button class="catalog-filter-btn" data-filter="vertical">Вертикальные станции</button>
+                <button class="catalog-filter-btn" data-filter="horizontal">Горизонтальные станции</button>
+                <button class="catalog-filter-btn" data-filter="premium">Премиум решения</button>
             </div>
             <div class="catalog-grid" id="catalogGrid">
                 <!-- Товары будут загружены через JavaScript -->
@@ -1379,86 +1328,119 @@
         </div>
     </section>
 
-    <!-- Примеры работ -->
     <section id="portfolio" class="portfolio-section">
         <div class="container">
-            <h2>РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</h2>
-            <p class="section-subtitle">Эксклюзивные решения для самых требовательных клиентов — от частных резиденций до коммерческих объектов премиум-класса</p>
+            <h2>Примеры выполненных работ</h2>
+            <p class="section-subtitle">Реализованные проекты автономных канализационных систем для частных домов и коммерческих объектов</p>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Резиденция на Рублевке">
+                        <img src="https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Загородный дом">
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>РЕЗИДЕНЦИЯ НА РУБЛЕВКЕ</h3>
-                        <p>Полностью автоматизированная система для особняка площадью 1200 м² с интеграцией в умный дом</p>
+                        <h3>Загородный дом в Оренбурге</h3>
+                        <p>Установка АКВАЛОС 10 Un* для дома площадью 250 м²</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Загородный клуб">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Коттедж">
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>ЗАГОРОДНЫЙ КЛУБ PREMIUM</h3>
-                        <p>Комплексное решение для объекта площадью 5 га с рестораном, спа-комплексом и гостиницей</p>
+                        <h3>Коттеджный поселок</h3>
+                        <p>Комплексное решение для 8 домов в Оренбургской области</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Эко-резорт">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Ресторан">
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>ЭКО-РЕЗОРТ "ЗОЛОТОЙ БЕРЕГ"</h3>
-                        <p>Система с рециркуляцией воды для премиального курорта на 50 гостевых вилл</p>
+                        <h3>Ресторан в Оренбурге</h3>
+                        <p>Установка промышленной системы очистки</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Преимущества -->
     <section class="advantages-section">
         <div class="container">
-            <h2>ПРЕИМУЩЕСТВА AQUALUX ELITE</h2>
-            <p class="section-subtitle">Технологии, которые устанавливают новые стандарты в области автономных канализационных систем для элитной недвижимости</p>
+            <h2>17 преимуществ септика Аквалос</h2>
+            <p class="section-subtitle">Почему наши клиенты выбирают автономные канализации Аквалос для своих объектов</p>
             <div class="advantages-grid">
                 <div class="advantage-item">
-                    <i class="fas fa-microchip"></i>
-                    <h3>ПОЛНАЯ АВТОМАТИЗАЦИЯ</h3>
+                    <i class="fas fa-ruble-sign"></i>
+                    <h3>Оптимальное соотношение цена - качество</h3>
                 </div>
                 <div class="advantage-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>УДАЛЕННОЕ УПРАВЛЕНИЕ</h3>
+                    <i class="fas fa-warehouse"></i>
+                    <h3>Постоянное наличие на складе</h3>
                 </div>
                 <div class="advantage-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3>РЕЦИРКУЛЯЦИЯ ВОДЫ</h3>
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Три рабочих дня до пользования станцией</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Малое электропотребление</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Отсутствие часто ломающихся устройств</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-power-off"></i>
+                    <h3>Работает при отсутствии электроэнергии (до 7 суток)</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-wind"></i>
+                    <h3>Полное отсутствие запаха</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>Работа при любых экстремальных погодных условиях</h3>
                 </div>
                 <div class="advantage-item">
                     <i class="fas fa-shield-alt"></i>
-                    <h3>МНОГОУРОВНЕВАЯ ЗАЩИТА</h3>
+                    <h3>Гарантия на корпус 50 лет</h3>
                 </div>
                 <div class="advantage-item">
-                    <i class="fas fa-leaf"></i>
-                    <h3>ЭКОЛОГИЧЕСКАЯ БЕЗОПАСНОСТЬ</h3>
+                    <i class="fas fa-tint"></i>
+                    <h3>Нечувствительность к пиковым потокам</h3>
                 </div>
                 <div class="advantage-item">
-                    <i class="fas fa-tachometer-alt"></i>
-                    <h3>ВЫСОКАЯ ПРОИЗВОДИТЕЛЬНОСТЬ</h3>
+                    <i class="fas fa-filter"></i>
+                    <h3>Степень очистки 96-98%</h3>
                 </div>
                 <div class="advantage-item">
-                    <i class="fas fa-infinity"></i>
-                    <h3>ПОЖИЗНЕННАЯ ГАРАНТИЯ</h3>
+                    <i class="fas fa-flask"></i>
+                    <h3>Не используются химические вещества</h3>
                 </div>
                 <div class="advantage-item">
                     <i class="fas fa-user-cog"></i>
-                    <h3>ПЕРСОНАЛЬНЫЙ ИНЖЕНЕР</h3>
+                    <h3>Самостоятельное обслуживание</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-volume-mute"></i>
+                    <h3>Низкий уровень шума</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Возможность оплаты после сдачи объекта</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-truck-loading"></i>
+                    <h3>Не нужна ассенизаторская машина</h3>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Простота переоборудования</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- О компании -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="about">
@@ -1466,21 +1448,21 @@
                     <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="О компании">
                 </div>
                 <div class="about-content">
-                    <h2>О КОМПАНИИ AQUALUX ELITE</h2>
-                    <p><strong>AquaLux Elite</strong> — эксклюзивный поставщик инженерных решений для элитной недвижимости. Мы специализируемся на создании автономных канализационных систем премиум-класса для загородных резиденций, коммерческих объектов и гостиничных комплексов высшей категории.</p>
-                    <p>Наша команда состоит из ведущих инженеров и технологов, которые используют передовые разработки и материалы для обеспечения безупречного качества работ. Каждый проект — это уникальное решение, разработанное с учетом архитектурных особенностей объекта и пожеланий клиента.</p>
+                    <h2>О компании</h2>
+                    <p><strong>ИП Рахметов А.К.</strong> (ИНН 561902398552) специализируется на установке автономных канализационных систем с 2010 года. Мы являемся официальными дилерами систем Аквалос в Оренбурге и Оренбургской области.</p>
+                    <p>Наша команда состоит из опытных специалистов, которые используют современное оборудование и материалы для обеспечения высокого качества работ.</p>
                     <div class="stats">
                         <div class="stat-item">
                             <span class="stat-number" id="yearsCounter">0</span>
-                            <span class="stat-text">ЛЕТ НА РЫНКЕ</span>
+                            <span class="stat-text">Лет опыта</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" id="projectsCounter">0</span>
-                            <span class="stat-text">РЕАЛИЗОВАННЫХ ПРОЕКТОВ</span>
+                            <span class="stat-text">Установленных систем</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" id="clientsCounter">0</span>
-                            <span class="stat-text">ДОВОЛЬНЫХ КЛИЕНТОВ</span>
+                            <span class="stat-text">Довольных клиентов</span>
                         </div>
                     </div>
                 </div>
@@ -1488,197 +1470,164 @@
         </div>
     </section>
 
-    <!-- Контакты -->
     <section id="contacts" class="contacts">
         <div class="container">
-            <h2>КОНТАКТЫ</h2>
-            <p class="section-subtitle">Свяжитесь с нами для получения персональной консультации и расчета стоимости эксклюзивного решения для вашего объекта</p>
+            <h2>Контакты</h2>
+            <p class="section-subtitle">Свяжитесь с нами для получения бесплатной консультации и расчета стоимости автономной канализации для вашего объекта</p>
             <div class="contacts-grid">
                 <div class="contact-info">
-                    <h3>КОНТАКТНАЯ ИНФОРМАЦИЯ</h3>
+                    <h3>Контактная информация</h3>
                     <div class="contact-item">
                         <i class="fas fa-user-tie"></i>
-                        <div><strong>AquaLux Elite</strong></div>
+                        <div><strong>ИП Рахметов А.К.</strong></div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-id-card"></i>
+                        <div>ИНН: 561902398552</div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <div>Москва, Рублевское шоссе, д. 28</div>
+                        <div>г. Оренбург, ул. Примерная, д. 123</div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <div>+7 (495) 123-45-67</div>
+                        <div>+7 (3532) 123-45-67</div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <div>info@aqualux-elite.ru</div>
+                        <div>info@rahmetov-orenburg.ru</div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
-                        <div>Пн-Пт: 9:00-20:00, Сб: 10:00-18:00</div>
+                        <div>Пн-Пт: 9:00-18:00</div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marked-alt"></i>
-                        <div>Работаем по всей России и СНГ</div>
+                        <div>Работаем по всему Оренбургу и области</div>
                     </div>
                     <div class="social-links">
-                        <a href="https://vk.com" target="_blank" aria-label="ВКонтакте"><i class="fab fa-vk"></i></a>
-                        <a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                        <a href="https://wa.me/74951234567" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://vk.com" target="_blank"><i class="fab fa-vk"></i></a>
+                        <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://wa.me/735321234567" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="contact-info">
-                    <h3>ЗАПРОС КОНСУЛЬТАЦИИ</h3>
+                    <h3>Форма обратной связи</h3>
                     <form id="contact-form">
                         <div class="form-group">
                             <label for="name">Ваше имя</label>
-                            <input type="text" id="name" class="form-control" required placeholder="Иван Иванов">
+                            <input type="text" id="name" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Ваш телефон</label>
-                            <input type="tel" id="phone" class="form-control" required placeholder="+7 (XXX) XXX-XX-XX">
+                            <input type="tel" id="phone" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="location">Местоположение объекта</label>
-                            <input type="text" id="location" class="form-control" placeholder="Московская область">
+                            <label for="location">Ваш населенный пункт</label>
+                            <input type="text" id="location" class="form-control" placeholder="Оренбург или область">
                         </div>
                         <div class="form-group">
-                            <label for="message">Дополнительная информация</label>
-                            <textarea id="message" class="form-control" rows="4" placeholder="Площадь объекта, особенности участка, пожелания..."></textarea>
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Интересует автономная канализация Аквалос..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-premium">ОТПРАВИТЬ ЗАПРОС</button>
+                        <button type="submit" class="btn btn-premium">Отправить</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Подвал -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>КОМПАНИЯ</h3>
+                    <h3>Компания</h3>
                     <ul>
                         <li><a href="#about">О нас</a></li>
                         <li><a href="#services">Услуги</a></li>
                         <li><a href="#catalog">Каталог</a></li>
-                        <li><a href="#portfolio">Проекты</a></li>
+                        <li><a href="#portfolio">Примеры работ</a></li>
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>УСЛУГИ</h3>
+                    <h3>Услуги</h3>
                     <ul>
-                        <li><a href="#services">Проектирование</a></li>
-                        <li><a href="#services">Монтаж систем</a></li>
+                        <li><a href="#services">Автономная канализация</a></li>
+                        <li><a href="#services">Монтаж септиков</a></li>
                         <li><a href="#services">Обслуживание</a></li>
                         <li><a href="#services">Консультации</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>КОНТАКТЫ</h3>
+                    <h3>Контакты</h3>
                     <ul>
-                        <li><strong>AquaLux Elite</strong></li>
-                        <li>Москва, Рублевское шоссе, д. 28</li>
-                        <li>+7 (495) 123-45-67</li>
-                        <li>info@aqualux-elite.ru</li>
-                        <li>Пн-Пт: 9:00-20:00</li>
-                        <li>Сб: 10:00-18:00</li>
+                        <li><strong>ИП Рахметов А.К.</strong></li>
+                        <li>ИНН: 561902398552</li>
+                        <li>+7 (3532) 123-45-67</li>
+                        <li>info@rahmetov-orenburg.ru</li>
+                        <li>г. Оренбург, ул. Примерная, д. 123</li>
+                        <li>Работаем по Оренбургу и области</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2025 AquaLux Elite. Все права защищены. Эксклюзивные инженерные решения для элитной недвижимости.
+                &copy; 2025 ИП Рахметов А.К. (ИНН 561902398552). Все права защищены. Обслуживаем Оренбург и Оренбургскую область.
             </div>
         </div>
     </footer>
 
-    <!-- Переключатель темы -->
-    <div class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+    <div class="theme-toggle" id="themeToggle">
         <i class="fas fa-moon" id="themeIcon"></i>
     </div>
 
     <script>
-        // Данные товаров для премиум сайта
+        // Данные товаров
         const products = [
             {
                 id: 1,
-                name: "AQUALUX RESIDENCE 500",
-                description: "Автономная система для резиденций до 500 м²",
-                price: "5 800 000 ₽",
-                image: "https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 5000л/сут", "Умное управление", "Рециркуляция воды"],
-                category: "residential",
-                badge: "РЕЗИДЕНЦИЯ",
-                fullDescription: "AQUALUX RESIDENCE 500 — это премиальное решение для загородных резиденций площадью до 500 м². Система обеспечивает полную автономность и интеграцию в умный дом.",
-                specifications: [
-                    { name: "Производительность", value: "5000 л/сут" },
-                    { name: "Управление", value: "Умная система с приложением" },
-                    { name: "Рециркуляция", value: "До 80% воды" },
-                    { name: "Гарантия", value: "10 лет" },
-                    { name: "Обслуживание", value: "VIP сервис 24/7" }
-                ]
+                name: "АКВАЛОС 2 Un*",
+                description: "Автономная канализация для дома и дачи",
+                price: "101 000 ₽",
+                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                features: ["Производительность: 400л/сут", "Залповый сброс: 120л", "Глубина подводящей трубы: до 30 см"],
+                category: "vertical",
+                badge: "Универсальная"
             },
             {
                 id: 2,
-                name: "AQUALUX COMMERCIAL 1000",
-                description: "Промышленная система для коммерческих объектов",
-                price: "12 500 000 ₽",
-                image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 10000л/сут", "Промышленная очистка", "Мониторинг онлайн"],
-                category: "commercial",
-                badge: "КОММЕРЦИЯ",
-                fullDescription: "AQUALUX COMMERCIAL 1000 предназначена для гостиниц, ресторанов и бизнес-центров. Обеспечивает бесперебойную работу при пиковых нагрузках.",
-                specifications: [
-                    { name: "Производительность", value: "10000 л/сут" },
-                    { name: "Очистка", value: "Многоступенчатая промышленная" },
-                    { name: "Мониторинг", value: "Онлайн 24/7" },
-                    { name: "Гарантия", value: "7 лет" },
-                    { name: "Обслуживание", value: "Техническая поддержка" }
-                ]
+                name: "АКВАЛОС 3 Un*",
+                description: "Автономная канализация для частного дома",
+                price: "113 000 ₽",
+                image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                features: ["Производительность: 600л/сут", "Залповый сброс: 200л", "Глубина подводящей трубы: до 50 см"],
+                category: "vertical",
+                badge: "Универсальная"
             },
             {
                 id: 3,
-                name: "AQUALUX ELITE ULTIMATE",
-                description: "Эксклюзивная система для объектов премиум-класса",
-                price: "25 000 000 ₽",
-                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Неограниченная производительность", "Полная автоматизация", "Эксклюзивный дизайн"],
-                category: "premium",
-                badge: "ЭКСКЛЮЗИВ",
-                fullDescription: "AQUALUX ELITE ULTIMATE — это вершина инженерной мысли для самых требовательных клиентов. Полностью автоматизированная система с уникальным дизайном и максимальной эффективностью.",
-                specifications: [
-                    { name: "Производительность", value: "Неограниченная" },
-                    { name: "Автоматизация", value: "Полная с ИИ" },
-                    { name: "Дизайн", value: "Индивидуальный" },
-                    { name: "Гарантия", value: "Пожизненная" },
-                    { name: "Обслуживание", value: "Персональный инженер" }
-                ]
+                name: "АКВАЛОС 10 Un*",
+                description: "Промышленная автономная канализация",
+                price: "237 000 ₽",
+                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                features: ["Производительность: 2000л/сут", "Залповый сброс: 800л", "Глубина подводящей трубы: до 60 см"],
+                category: "vertical",
+                badge: "Универсальная"
             },
             {
                 id: 4,
-                name: "AQUALUX ELITE SIGNATURE",
-                description: "Система для элитных загородных резиденций",
+                name: "АКВАЛОС ПРЕМИУМ",
+                description: "Элитная система для резиденций",
                 price: "10 000 000 ₽",
-                image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 8000л/сут", "Бесшумная работа", "Интеграция в умный дом"],
+                image: "https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                features: ["Неограниченная производительность", "Полная автоматизация", "Умное управление"],
                 category: "premium",
-                badge: "ПРЕМИУМ",
-                fullDescription: "AQUALUX ELITE SIGNATURE создана для владельцев элитной недвижимости, ценящих безупречное качество и современные технологии. Бесшумная работа и полная интеграция в систему умного дома.",
-                specifications: [
-                    { name: "Производительность", value: "8000 л/сут" },
-                    { name: "Уровень шума", value: "Менее 25 дБ" },
-                    { name: "Интеграция", value: "Умный дом + приложение" },
-                    { name: "Гарантия", value: "15 лет" },
-                    { name: "Обслуживание", value: "VIP сервис" }
-                ]
+                badge: "ПРЕМИУМ"
             }
         ];
 
-        // Инициализация при загрузке страницы
         document.addEventListener('DOMContentLoaded', function() {
-            // Скрытие анимации загрузки
             const loadingAnimation = document.getElementById('loadingAnimation');
             if (loadingAnimation) {
                 setTimeout(() => {
@@ -1686,26 +1635,17 @@
                 }, 2000);
             }
             
-            // Инициализация каталога
             initCatalog();
-            
-            // Инициализация счетчиков
             initCounters();
-            
-            // Инициализация базовой функциональности
             initBaseFunctionality();
         });
 
-        // Инициализация каталога
         function initCatalog() {
             const catalogGrid = document.getElementById('catalogGrid');
-            
             if (!catalogGrid) return;
             
-            // Очистка контейнера
             catalogGrid.innerHTML = '';
             
-            // Создание карточек товаров
             products.forEach(product => {
                 const productCard = document.createElement('div');
                 productCard.className = 'product-card';
@@ -1723,26 +1663,22 @@
                         </div>
                         <div class="product-price">${product.price}</div>
                         <div class="product-actions">
-                            <button class="btn" data-product-id="${product.id}">ПОДРОБНЕЕ</button>
-                            <button class="btn btn-premium" data-product-id="${product.id}">КОНСУЛЬТАЦИЯ</button>
+                            <button class="btn" data-product-id="${product.id}">Подробнее</button>
+                            <button class="btn ${product.category === 'premium' ? 'btn-premium' : 'btn-outline'}" data-product-id="${product.id}">Заказать</button>
                         </div>
                     </div>
                 `;
                 catalogGrid.appendChild(productCard);
             });
             
-            // Инициализация фильтров каталога
             initCatalogFilters();
         }
         
-        // Инициализация фильтров каталога
         function initCatalogFilters() {
             const filterButtons = document.querySelectorAll('.catalog-filter-btn');
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    // Убираем активный класс у всех кнопок
                     filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // Добавляем активный класс текущей кнопке
                     button.classList.add('active');
                     
                     const filter = button.getAttribute('data-filter');
@@ -1751,60 +1687,29 @@
             });
         }
         
-        // Фильтрация каталога
         function filterCatalog(filter) {
             const productCards = document.querySelectorAll('.product-card');
             productCards.forEach(card => {
                 if (filter === 'all' || card.getAttribute('data-category') === filter) {
                     card.style.display = 'block';
-                    // Анимация появления отфильтрованных карточек
-                    if (typeof gsap !== 'undefined') {
-                        gsap.fromTo(card, {
-                            opacity: 0,
-                            scale: 0.8
-                        }, {
-                            opacity: 1,
-                            scale: 1,
-                            duration: 0.5,
-                            ease: "power2.out"
-                        });
-                    } else {
-                        card.style.opacity = '1';
-                    }
                 } else {
-                    // Анимация скрытия карточек
-                    if (typeof gsap !== 'undefined') {
-                        gsap.to(card, {
-                            opacity: 0,
-                            scale: 0.8,
-                            duration: 0.3,
-                            ease: "power2.in",
-                            onComplete: () => {
-                                card.style.display = 'none';
-                            }
-                        });
-                    } else {
-                        card.style.display = 'none';
-                    }
+                    card.style.display = 'none';
                 }
             });
         }
 
-        // Функция для запуска счетчиков
         function initCounters() {
             const yearsCounter = document.getElementById('yearsCounter');
             const projectsCounter = document.getElementById('projectsCounter');
             const clientsCounter = document.getElementById('clientsCounter');
             
             if (yearsCounter && projectsCounter && clientsCounter) {
-                // Запускаем счетчики
-                animateCounter(yearsCounter, 0, 12, 2500);
-                animateCounter(projectsCounter, 0, 150, 3000);
-                animateCounter(clientsCounter, 0, 120, 2800);
+                animateCounter(yearsCounter, 0, 15, 2500);
+                animateCounter(projectsCounter, 0, 1200, 3000);
+                animateCounter(clientsCounter, 0, 98, 2800);
             }
         }
 
-        // Улучшенная функция для анимации счетчика
         function animateCounter(element, start, end, duration) {
             if (!element) return;
             
@@ -1816,21 +1721,21 @@
                     current = end;
                     clearInterval(timer);
                 }
-                element.textContent = Math.floor(current).toLocaleString();
+                if (element.id === 'clientsCounter') {
+                    element.textContent = Math.floor(current) + '%';
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString();
+                }
             }, 16);
         }
 
-        // Базовая функциональность
         function initBaseFunctionality() {
-            // Мобильное меню
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const mobileNav = document.getElementById('mobileNav');
             
             if (mobileMenuBtn && mobileNav) {
                 mobileMenuBtn.addEventListener('click', () => {
                     mobileNav.classList.toggle('active');
-                    
-                    // Анимация иконки меню
                     const icon = mobileMenuBtn.querySelector('i');
                     if (mobileNav.classList.contains('active')) {
                         icon.className = 'fas fa-times';
@@ -1840,7 +1745,6 @@
                 });
             }
             
-            // Плавная прокрутка
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -1848,14 +1752,12 @@
                     const targetElement = document.querySelector(targetId);
                     
                     if (targetElement) {
-                        // Нативная плавная прокрутка
                         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 80;
                         window.scrollTo({
                             top: targetPosition,
                             behavior: 'smooth'
                         });
                         
-                        // Закрытие мобильного меню после клика
                         if (mobileNav) {
                             mobileNav.classList.remove('active');
                             if (mobileMenuBtn) {
@@ -1866,7 +1768,6 @@
                 });
             });
             
-            // Переключение темы
             const themeToggle = document.getElementById('themeToggle');
             const themeIcon = document.getElementById('themeIcon');
             let isDarkTheme = localStorage.getItem('darkTheme') === 'true';
@@ -1892,13 +1793,10 @@
                 applyTheme();
             }
             
-            // Обработка формы
             const contactForm = document.getElementById('contact-form');
             if (contactForm) {
                 contactForm.addEventListener('submit', (e) => {
                     e.preventDefault();
-                    
-                    // Получаем данные формы
                     const data = {
                         name: document.getElementById('name').value,
                         phone: document.getElementById('phone').value,
@@ -1906,32 +1804,25 @@
                         message: document.getElementById('message').value
                     };
                     
-                    // В реальном приложении здесь будет отправка на сервер
-                    console.log('Данные формы:', data);
-                    
-                    // Имитация отправки
                     setTimeout(() => {
                         contactForm.reset();
-                        alert("Ваш запрос отправлен! Наш специалист свяжется с вами в ближайшее время.");
+                        alert("Ваш запрос отправлен! Мы свяжемся с вами в ближайшее время.");
                     }, 500);
                 });
             }
             
-            // Социальные сети - открытие в новом окне
             document.querySelectorAll('.social-links a').forEach(link => {
                 link.setAttribute('target', '_blank');
                 link.setAttribute('rel', 'noopener noreferrer');
             });
             
-            // Телефонный номер
             document.querySelectorAll('.phone').forEach(phoneElement => {
                 phoneElement.addEventListener('click', (e) => {
                     e.preventDefault();
-                    window.location.href = 'tel:+74951234567';
+                    window.location.href = 'tel:+735321234567';
                 });
             });
             
-            // Закрытие мобильного меню при ресайзе
             window.addEventListener('resize', () => {
                 if (window.innerWidth > 768 && mobileNav) {
                     mobileNav.classList.remove('active');
@@ -1941,7 +1832,6 @@
                 }
             });
 
-            // Обработка скролла для шапки
             const header = document.getElementById('header');
             if (header) {
                 window.addEventListener('scroll', () => {
