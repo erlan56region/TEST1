@@ -1304,7 +1304,7 @@
         <div class="container">
             <div class="about">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="О компании">
+                    <img src="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg" alt="О компании">
                 </div>
                 <div class="about-content">
                     <h2>О компании</h2>
@@ -1483,7 +1483,7 @@
                     name: "АКВАЛОС 2 Un*",
                     description: "Автономная канализация для дома и дачи",
                     price: "101 000 ₽",
-                    image: "data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    image: data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 400л/сут", "Залповый сброс: 120л", "Глубина подводящей трубы: до 30 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1533,7 +1533,7 @@
                     name: "АКВАЛОС 8 Un*",
                     description: "Профессиональная автономная канализация",
                     price: "181 000 ₽",
-                    image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    image: data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 1600л/сут", "Залповый сброс: 630л", "Глубина подводящей трубы: до 60 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1543,7 +1543,7 @@
                     name: "АКВАЛОС 10 Un*",
                     description: "Промышленная автономная канализация",
                     price: "237 000 ₽",
-                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    image: data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 2000л/сут", "Залповый сброс: 800л", "Глубина подводящей трубы: до 60 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1553,7 +1553,7 @@
                     name: "Горизонтальная станция АКВАЛОС 4",
                     description: "Горизонтальная автономная канализация",
                     price: "148 000 ₽",
-                    image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    image: data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 800 л/сут", "Залповый сброс: 200 л", "Глубина подводящей трубы: до 30 см"],
                     category: "horizontal",
                     badge: "Горизонтальная"
@@ -1563,7 +1563,7 @@
                     name: "Горизонтальная станция АКВАЛОС 5",
                     description: "Горизонтальная автономная канализация",
                     price: "158 000 ₽",
-                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    image: data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 900 л/сут", "Залповый сброс: 300 л", "Глубина подводящей трубы: до 30 см"],
                     category: "horizontal",
                     badge: "Горизонтальная"
