@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Разработка 7.0
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
