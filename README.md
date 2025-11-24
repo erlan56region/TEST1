@@ -1,8 +1,12 @@
-Разработка 1.3
+Разработка 1.5
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#27ae60">
+    <meta name="msapplication-TileColor" content="#27ae60">
     <title>ИП Рахметов А.К. - Автономная канализация Аквалос</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -27,6 +31,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        html {
+            scroll-behavior: smooth;
         }
         
         body {
@@ -36,6 +47,15 @@
             background-color: var(--white);
             overflow-x: hidden;
             transition: var(--transition);
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+        }
+        
+        /* Фикс для мобильного Safari */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                min-height: -webkit-fill-available;
+            }
         }
         
         body.dark-theme {
@@ -97,12 +117,13 @@
             width: 100%;
             z-index: 1000;
             transition: var(--transition);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
         }
         
         header.scrolled {
             padding: 5px 0;
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
         }
         
         .dark-theme header.scrolled {
@@ -153,6 +174,7 @@
             font-weight: 500;
             transition: var(--transition);
             position: relative;
+            padding: 5px 0;
         }
         
         .desktop-nav a:hover {
@@ -182,10 +204,14 @@
             transition: var(--transition);
             cursor: pointer;
             text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
         }
         
         .phone:hover {
             color: var(--primary);
+            background: var(--primary-light);
+            color: var(--white);
         }
         
         .phone i {
@@ -201,10 +227,13 @@
             color: var(--dark);
             cursor: pointer;
             transition: var(--transition);
+            padding: 10px;
+            border-radius: 5px;
         }
         
         .mobile-menu-btn:hover {
             color: var(--primary);
+            background: var(--primary-light);
         }
         
         .mobile-nav {
@@ -233,7 +262,7 @@
         }
         
         .mobile-nav li {
-            margin: 15px 0;
+            margin: 10px 0;
         }
         
         .mobile-nav a {
@@ -241,7 +270,7 @@
             color: var(--dark);
             font-weight: 500;
             display: block;
-            padding: 10px;
+            padding: 12px 15px;
             border-radius: 5px;
             transition: var(--transition);
         }
@@ -259,6 +288,13 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero .container {
+            width: 100%;
         }
         
         .hero:before {
@@ -274,23 +310,25 @@
         }
         
         .hero h1 {
-            font-size: 3rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             margin-bottom: 20px;
             position: relative;
+            line-height: 1.2;
         }
         
         .hero p {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
             max-width: 700px;
             margin: 0 auto 30px;
             position: relative;
+            line-height: 1.5;
         }
         
         .btn {
             display: inline-block;
             background: var(--white);
             color: var(--primary);
-            padding: 12px 30px;
+            padding: 14px 32px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -299,6 +337,11 @@
             cursor: pointer;
             position: relative;
             overflow: hidden;
+            font-size: 1rem;
+            min-height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .btn:before {
@@ -334,15 +377,16 @@
         
         /* Секции */
         section {
-            padding: 100px 0;
+            padding: 80px 0;
         }
         
         h2 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
             margin-bottom: 50px;
             color: var(--dark);
             position: relative;
+            line-height: 1.3;
         }
         
         h2:after {
@@ -398,6 +442,7 @@
         .service-content h3 {
             margin-bottom: 15px;
             color: var(--dark);
+            font-size: 1.3rem;
         }
         
         /* Каталог */
@@ -413,11 +458,13 @@
             background: var(--light);
             color: var(--dark);
             border: none;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border-radius: 50px;
             cursor: pointer;
             transition: var(--transition);
             font-weight: 500;
+            font-size: 1rem;
+            min-height: 44px;
         }
         
         .catalog-filter-btn.active,
@@ -476,6 +523,7 @@
         .product-content h3 {
             margin-bottom: 10px;
             color: var(--dark);
+            font-size: 1.3rem;
         }
         
         .product-features {
@@ -508,6 +556,13 @@
         .product-actions {
             display: flex;
             gap: 10px;
+        }
+        
+        .product-actions .btn {
+            flex: 1;
+            padding: 12px 20px;
+            font-size: 0.9rem;
+            min-height: 44px;
         }
         
         /* Преимущества */
@@ -544,6 +599,7 @@
         .advantage-item h3 {
             font-size: 1rem;
             color: var(--dark);
+            line-height: 1.4;
         }
         
         /* О компании */
@@ -577,6 +633,7 @@
         .about-content p {
             margin-bottom: 20px;
             color: var(--gray);
+            line-height: 1.6;
         }
         
         .stats {
@@ -622,6 +679,7 @@
         .contact-info h3 {
             margin-bottom: 20px;
             color: var(--dark);
+            font-size: 1.5rem;
         }
         
         .contact-item {
@@ -647,13 +705,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             background: var(--primary);
             color: var(--white);
             border-radius: 50%;
             text-decoration: none;
             transition: var(--transition);
+            font-size: 1.2rem;
         }
         
         .social-links a:hover {
@@ -667,13 +726,15 @@
         
         .form-control {
             width: 100%;
-            padding: 12px 15px;
+            padding: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
             font-family: 'Inter', sans-serif;
             transition: var(--transition);
             background: var(--white);
             color: var(--dark);
+            font-size: 16px; /* Предотвращает масштабирование в iOS */
+            min-height: 50px;
         }
         
         .form-control:focus {
@@ -682,9 +743,14 @@
             box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.2);
         }
         
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
         label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             font-weight: 500;
             color: var(--dark);
         }
@@ -706,6 +772,7 @@
         .footer-column h3 {
             margin-bottom: 20px;
             color: var(--white);
+            font-size: 1.3rem;
         }
         
         .footer-column ul {
@@ -714,6 +781,7 @@
         
         .footer-column li {
             margin-bottom: 10px;
+            line-height: 1.5;
         }
         
         .footer-column a {
@@ -732,6 +800,7 @@
             border-top: 1px solid #495057;
             color: #adb5bd;
             font-size: 0.9rem;
+            line-height: 1.5;
         }
         
         /* Переключатель темы */
@@ -751,6 +820,7 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             z-index: 100;
+            border: none;
         }
         
         .theme-toggle:hover {
@@ -772,6 +842,7 @@
             opacity: 0;
             visibility: hidden;
             transition: var(--transition);
+            padding: 20px;
         }
         
         .modal.active {
@@ -784,10 +855,12 @@
             border-radius: 10px;
             padding: 30px;
             max-width: 500px;
-            width: 90%;
+            width: 100%;
             position: relative;
             transform: scale(0.9);
             transition: var(--transition);
+            max-height: 90vh;
+            overflow-y: auto;
         }
         
         .modal.active .modal-content {
@@ -804,6 +877,11 @@
             color: var(--gray);
             cursor: pointer;
             transition: var(--transition);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .close-modal:hover {
@@ -825,6 +903,7 @@
             opacity: 0;
             visibility: hidden;
             transition: var(--transition);
+            padding: 20px;
         }
         
         .product-modal.active {
@@ -836,7 +915,7 @@
             background: var(--white);
             border-radius: 10px;
             max-width: 900px;
-            width: 90%;
+            width: 100%;
             max-height: 90vh;
             overflow-y: auto;
             position: relative;
@@ -859,6 +938,11 @@
             cursor: pointer;
             transition: var(--transition);
             z-index: 10;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .product-modal-close:hover {
@@ -893,6 +977,7 @@
         .product-modal-description {
             margin-bottom: 20px;
             color: var(--gray);
+            line-height: 1.6;
         }
         
         .specs-list {
@@ -920,6 +1005,11 @@
             gap: 10px;
         }
         
+        .product-modal-actions .btn {
+            flex: 1;
+            min-height: 50px;
+        }
+        
         /* Уведомление */
         .notification {
             position: fixed;
@@ -933,6 +1023,7 @@
             transform: translateX(150%);
             transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             z-index: 3000;
+            max-width: 300px;
         }
         
         .notification.show {
@@ -949,6 +1040,11 @@
             
             .footer-content {
                 grid-template-columns: 1fr 1fr;
+            }
+            
+            .about-img {
+                height: 300px;
+                font-size: 6rem;
             }
         }
         
@@ -970,12 +1066,9 @@
                 display: block;
             }
             
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
+            .hero {
+                padding: 150px 0 80px;
+                min-height: 80vh;
             }
             
             h2 {
@@ -988,6 +1081,14 @@
             
             .stats {
                 grid-template-columns: 1fr;
+            }
+            
+            .product-modal-body {
+                padding: 20px;
+            }
+            
+            .modal-content {
+                padding: 25px;
             }
         }
         
@@ -1006,9 +1107,77 @@
                 align-items: center;
             }
             
+            .catalog-filter-btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
             .product-actions,
             .product-modal-actions {
                 flex-direction: column;
+            }
+            
+            .hero {
+                padding: 130px 0 60px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .product-modal-body,
+            .modal-content {
+                padding: 20px 15px;
+            }
+            
+            .theme-toggle {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Фиксы для конкретных браузеров */
+        /* Safari iOS */
+        @media not all and (min-resolution:.001dpcm) { 
+            @supports (-webkit-appearance:none) {
+                .hero {
+                    -webkit-backface-visibility: hidden;
+                }
+            }
+        }
+        
+        /* Firefox */
+        @-moz-document url-prefix() {
+            .header-inner {
+                padding: 12px 0;
+            }
+        }
+        
+        /* Edge */
+        @supports (-ms-ime-align:auto) {
+            .hero {
+                background: var(--primary);
             }
         }
     </style>
@@ -1677,6 +1846,9 @@
                     }
                 }
             });
+            
+            // Предотвращение масштабирования на iOS при фокусе
+            document.addEventListener('touchstart', function() {}, {passive: true});
         }
 
         // Инициализация каталога
