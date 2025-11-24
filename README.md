@@ -1,4 +1,5 @@
-Сайт в разработке 9.0
+В РАЗРАБОТКЕ 10.1
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -1194,7 +1195,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-img">
-                        <img src="data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg">
+                        <img src="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg" alt="Загородный дом">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Загородный дом в Оренбурге</h3>
@@ -1442,12 +1443,12 @@
     </div>
 
     <script>
-        // Ускоренная загрузка - максимум 5-6 секунд
+        // Ускоренная загрузка - максимум 3 секунды
         document.addEventListener('DOMContentLoaded', function() {
             const loadingAnimation = document.getElementById('loadingAnimation');
             const loadingProgress = document.getElementById('loadingProgress');
             const startTime = Date.now();
-            const maxLoadTime = 5000; // 5 секунд максимум
+            const maxLoadTime = 3000; // 3 секунды максимум
             let progress = 0;
             
             // Быстрая симуляция загрузки с прогресс-баром
@@ -1456,21 +1457,18 @@
                 progress = Math.min(100, (elapsed / maxLoadTime) * 100);
                 loadingProgress.style.width = progress + '%';
                 
-                // Если прошло больше 5 секунд или загрузка завершена, скрываем прелоадер
+                // Если прошло больше 3 секунд или загрузка завершена, скрываем прелоадер
                 if (elapsed >= maxLoadTime) {
                     clearInterval(progressInterval);
                     setTimeout(() => {
                         loadingAnimation.classList.add('hidden');
+                        // Инициализация остального функционала
+                        initCatalog();
+                        initCounters();
+                        initBaseFunctionality();
                     }, 300);
                 }
-            }, 50);
-            
-            // Инициализация остального функционала
-            setTimeout(() => {
-                initCatalog();
-                initCounters();
-                initBaseFunctionality();
-            }, 100);
+            }, 30);
         });
 
         function initCatalog() {
@@ -1483,7 +1481,7 @@
                     name: "АКВАЛОС 2 Un*",
                     description: "Автономная канализация для дома и дачи",
                     price: "101 000 ₽",
-                    image: data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 400л/сут", "Залповый сброс: 120л", "Глубина подводящей трубы: до 30 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1493,7 +1491,7 @@
                     name: "АКВАЛОС 3 Un*",
                     description: "Автономная канализация для частного дома",
                     price: "113 000 ₽",
-                    image: data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 600л/сут", "Залповый сброс: 200л", "Глубина подводящей трубы: до 50 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1503,7 +1501,7 @@
                     name: "АКВАЛОС 4 Un*",
                     description: "Автономная канализация для загородного дома",
                     price: "129 000 ₽",
-                    image: "data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 800л/сут", "Залповый сброс: 230л", "Глубина подводящей трубы: до 60 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1513,7 +1511,7 @@
                     name: "АКВАЛОС 5 Un*",
                     description: "Автономная канализация для большого дома",
                     price: "141 000 ₽",
-                    image: "data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 900л/сут", "Залповый сброс: 320л", "Глубина подводящей трубы: до 60 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1523,7 +1521,7 @@
                     name: "АКВАЛОС 7 Un*",
                     description: "Автономная канализация повышенной производительности",
                     price: "171 000 ₽",
-                    image: "data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 1200л/сут", "Залповый сброс: 500л", "Глубина подводящей трубы: до 60 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1533,7 +1531,7 @@
                     name: "АКВАЛОС 8 Un*",
                     description: "Профессиональная автономная канализация",
                     price: "181 000 ₽",
-                    image: data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 1600л/сут", "Залповый сброс: 630л", "Глубина подводящей трубы: до 60 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1543,7 +1541,7 @@
                     name: "АКВАЛОС 10 Un*",
                     description: "Промышленная автономная канализация",
                     price: "237 000 ₽",
-                    image: data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 2000л/сут", "Залповый сброс: 800л", "Глубина подводящей трубы: до 60 см"],
                     category: "vertical",
                     badge: "Универсальная"
@@ -1553,7 +1551,7 @@
                     name: "Горизонтальная станция АКВАЛОС 4",
                     description: "Горизонтальная автономная канализация",
                     price: "148 000 ₽",
-                    image: data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 800 л/сут", "Залповый сброс: 200 л", "Глубина подводящей трубы: до 30 см"],
                     category: "horizontal",
                     badge: "Горизонтальная"
@@ -1563,7 +1561,7 @@
                     name: "Горизонтальная станция АКВАЛОС 5",
                     description: "Горизонтальная автономная канализация",
                     price: "158 000 ₽",
-                    image: data-original="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
                     features: ["Производительность: 900 л/сут", "Залповый сброс: 300 л", "Глубина подводящей трубы: до 30 см"],
                     category: "horizontal",
                     badge: "Горизонтальная"
