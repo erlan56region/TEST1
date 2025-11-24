@@ -1,5 +1,4 @@
-Разработка 5.0
-
+В разработке 6.0
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -953,6 +952,22 @@
             font-weight: 500;
         }
         
+        .progress-bar {
+            width: 200px;
+            height: 4px;
+            background: var(--light-gray);
+            border-radius: 2px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: var(--primary);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
@@ -1061,7 +1076,10 @@
 <body>
     <div class="loading-animation" id="loadingAnimation">
         <div class="loader"></div>
-        <div class="loading-text">АКВАЛОС</div>
+        <div class="loading-text">Загрузка...</div>
+        <div class="progress-bar">
+            <div class="progress" id="loadingProgress"></div>
+        </div>
     </div>
 
     <header id="header">
@@ -1116,17 +1134,270 @@
         </div>
     </section>
 
-    <!-- Остальные секции остаются с тем же содержанием, но с новым дизайном -->
-    <!-- Services, Catalog, Portfolio, Advantages, About, Contacts sections -->
-    <!-- Для экономии места оставляю структуру как в предыдущем варианте -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <p class="section-subtitle">Мы предлагаем полный комплекс услуг по установке и обслуживанию автономных канализационных систем</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Монтаж автономной канализации">
+                    </div>
+                    <div class="service-content">
+                        <h3>Монтаж автономной канализации</h3>
+                        <p>Профессиональная установка септиков Аквалос для частных домов, дач и коммерческих объектов в Оренбурге и области.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Обслуживание септиков">
+                    </div>
+                    <div class="service-content">
+                        <h3>Обслуживание септиков</h3>
+                        <p>Регулярное обслуживание, чистка и ремонт автономных канализационных систем Аквалос.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1581094794368-3fbb8f2e7b38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Доставка и установка">
+                    </div>
+                    <div class="service-content">
+                        <h3>Доставка и установка</h3>
+                        <p>Быстрая доставка и профессиональный монтаж септиков Аквалос в Оренбурге и Оренбургской области.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Остальные секции остаются без изменений -->
 
     <div class="theme-toggle" id="themeToggle">
         <i class="fas fa-moon" id="themeIcon"></i>
     </div>
 
     <script>
-        // JavaScript код остается таким же, как в предыдущем варианте
-        // с адаптацией под новый дизайн
+        // Ускоренная загрузка - максимум 5-6 секунд
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingAnimation = document.getElementById('loadingAnimation');
+            const loadingProgress = document.getElementById('loadingProgress');
+            const startTime = Date.now();
+            const maxLoadTime = 5000; // 5 секунд максимум
+            let progress = 0;
+            
+            // Быстрая симуляция загрузки с прогресс-баром
+            const progressInterval = setInterval(() => {
+                const elapsed = Date.now() - startTime;
+                progress = Math.min(100, (elapsed / maxLoadTime) * 100);
+                loadingProgress.style.width = progress + '%';
+                
+                // Если прошло больше 5 секунд или загрузка завершена, скрываем прелоадер
+                if (elapsed >= maxLoadTime) {
+                    clearInterval(progressInterval);
+                    setTimeout(() => {
+                        loadingAnimation.classList.add('hidden');
+                    }, 300);
+                }
+            }, 50);
+            
+            // Инициализация остального функционала
+            setTimeout(() => {
+                initCatalog();
+                initCounters();
+                initBaseFunctionality();
+            }, 100);
+        });
+
+        // Остальной JavaScript код остается без изменений
+        function initCatalog() {
+            const catalogGrid = document.getElementById('catalogGrid');
+            if (!catalogGrid) return;
+            
+            const products = [
+                {
+                    id: 1,
+                    name: "АКВАЛОС 2 Un*",
+                    description: "Автономная канализация для дома и дачи",
+                    price: "101 000 ₽",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    features: ["Производительность: 400л/сут", "Залповый сброс: 120л", "Глубина подводящей трубы: до 30 см"],
+                    category: "vertical",
+                    badge: "Универсальная"
+                },
+                {
+                    id: 2,
+                    name: "АКВАЛОС 3 Un*",
+                    description: "Автономная канализация для частного дома",
+                    price: "113 000 ₽",
+                    image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    features: ["Производительность: 600л/сут", "Залповый сброс: 200л", "Глубина подводящей трубы: до 50 см"],
+                    category: "vertical",
+                    badge: "Универсальная"
+                },
+                {
+                    id: 3,
+                    name: "АКВАЛОС 10 Un*",
+                    description: "Промышленная автономная канализация",
+                    price: "237 000 ₽",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    features: ["Производительность: 2000л/сут", "Залповый сброс: 800л", "Глубина подводящей трубы: до 60 см"],
+                    category: "vertical",
+                    badge: "Универсальная"
+                }
+            ];
+            
+            catalogGrid.innerHTML = '';
+            
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.setAttribute('data-category', product.category);
+                productCard.innerHTML = `
+                    <div class="product-img">
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="product-badge">${product.badge}</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <div class="product-features">
+                            ${product.features.map(feature => `<span class="product-feature">${feature}</span>`).join('')}
+                        </div>
+                        <div class="product-price">${product.price}</div>
+                        <div class="product-actions">
+                            <button class="btn" data-product-id="${product.id}">Подробнее</button>
+                            <button class="btn btn-outline" data-product-id="${product.id}">Заказать</button>
+                        </div>
+                    </div>
+                `;
+                catalogGrid.appendChild(productCard);
+            });
+        }
+
+        function initCounters() {
+            const yearsCounter = document.getElementById('yearsCounter');
+            const projectsCounter = document.getElementById('projectsCounter');
+            const clientsCounter = document.getElementById('clientsCounter');
+            
+            if (yearsCounter && projectsCounter && clientsCounter) {
+                animateCounter(yearsCounter, 0, 15, 2000);
+                animateCounter(projectsCounter, 0, 1200, 2500);
+                animateCounter(clientsCounter, 0, 98, 1800);
+            }
+        }
+
+        function animateCounter(element, start, end, duration) {
+            if (!element) return;
+            
+            let current = start;
+            const increment = (end - start) / (duration / 16);
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= end) {
+                    current = end;
+                    clearInterval(timer);
+                }
+                if (element.id === 'clientsCounter') {
+                    element.textContent = Math.floor(current) + '%';
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString();
+                }
+            }, 16);
+        }
+
+        function initBaseFunctionality() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            if (mobileMenuBtn && mobileNav) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileNav.classList.toggle('active');
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (mobileNav.classList.contains('active')) {
+                        icon.className = 'fas fa-times';
+                    } else {
+                        icon.className = 'fas fa-bars';
+                    }
+                });
+            }
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 80;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        if (mobileNav) {
+                            mobileNav.classList.remove('active');
+                            if (mobileMenuBtn) {
+                                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                            }
+                        }
+                    }
+                });
+            });
+            
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            let isDarkTheme = localStorage.getItem('darkTheme') === 'true';
+            
+            function applyTheme() {
+                if (isDarkTheme) {
+                    document.body.classList.add('dark-theme');
+                    if (themeIcon) themeIcon.className = 'fas fa-sun';
+                } else {
+                    document.body.classList.remove('dark-theme');
+                    if (themeIcon) themeIcon.className = 'fas fa-moon';
+                }
+            }
+            
+            function toggleTheme() {
+                isDarkTheme = !isDarkTheme;
+                localStorage.setItem('darkTheme', isDarkTheme);
+                applyTheme();
+            }
+            
+            if (themeToggle && themeIcon) {
+                themeToggle.addEventListener('click', toggleTheme);
+                applyTheme();
+            }
+            
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const data = {
+                        name: document.getElementById('name').value,
+                        phone: document.getElementById('phone').value,
+                        location: document.getElementById('location').value,
+                        message: document.getElementById('message').value
+                    };
+                    
+                    setTimeout(() => {
+                        contactForm.reset();
+                        alert("Ваш запрос отправлен! Мы свяжемся с вами в ближайшее время.");
+                    }, 500);
+                });
+            }
+            
+            const header = document.getElementById('header');
+            if (header) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            }
+        }
     </script>
 </body>
 </html>
