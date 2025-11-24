@@ -1,4 +1,4 @@
-Сайт в разработке 8.0
+Сайт в разработке 9.0
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
