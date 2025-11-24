@@ -1,4 +1,4 @@
-Разработка 7.0
+Сайт в разработке 8.0
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -1088,7 +1088,7 @@
         <div class="container">
             <div class="header-inner">
                 <div class="logo">
-                    <i class="fas fa-tint"></i>
+                    <i class="fas fa-water"></i>
                     <div>
                         ИП Рахметов А.К.
                         <div class="logo-subtitle">Автономные канализации</div>
@@ -1107,7 +1107,7 @@
                     </ul>
                 </nav>
                 <div class="phone">
-                    <i class="fas fa-phone"></i>
+                    <i class="fas fa-phone-alt"></i>
                     +7 (3532) 123-45-67
                 </div>
             </div>
@@ -1180,7 +1180,6 @@
                 <button class="catalog-filter-btn active" data-filter="all">Все модели</button>
                 <button class="catalog-filter-btn" data-filter="vertical">Вертикальные станции</button>
                 <button class="catalog-filter-btn" data-filter="horizontal">Горизонтальные станции</button>
-                <button class="catalog-filter-btn" data-filter="premium">Премиум решения</button>
             </div>
             <div class="catalog-grid" id="catalogGrid">
                 <!-- Товары загружаются через JavaScript -->
@@ -1230,11 +1229,11 @@
             <p class="section-subtitle">Почему наши клиенты выбирают автономные канализации Аквалос для своих объектов</p>
             <div class="advantages-grid">
                 <div class="advantage-item">
-                    <i class="fas fa-ruble-sign"></i>
+                    <i class="fas fa-money-bill-wave"></i>
                     <h3>Оптимальное соотношение цена - качество</h3>
                 </div>
                 <div class="advantage-item">
-                    <i class="fas fa-warehouse"></i>
+                    <i class="fas fa-boxes"></i>
                     <h3>Постоянное наличие на складе</h3>
                 </div>
                 <div class="advantage-item">
@@ -1250,7 +1249,7 @@
                     <h3>Отсутствие часто ломающихся устройств</h3>
                 </div>
                 <div class="advantage-item">
-                    <i class="fas fa-power-off"></i>
+                    <i class="fas fa-plug"></i>
                     <h3>Работает при отсутствии электроэнергии (до 7 суток)</h3>
                 </div>
                 <div class="advantage-item">
@@ -1350,7 +1349,7 @@
                         <div>г. Оренбург, ул. Примерная, д. 123</div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
+                        <i class="fas fa-phone-alt"></i>
                         <div>+7 (3532) 123-45-67</div>
                     </div>
                     <div class="contact-item">
@@ -1588,16 +1587,6 @@
                     features: ["Производительность: 2000 л/сут", "Залповый сброс: 800 л", "Глубина подводящей трубы: до 30 см"],
                     category: "horizontal",
                     badge: "Горизонтальная"
-                },
-                {
-                    id: 12,
-                    name: "АКВАЛОС ПРЕМИУМ 15",
-                    description: "Элитная система для резиденций",
-                    price: "10 000 000 ₽",
-                    image: "https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                    features: ["Производительность: 5000 л/сут", "Залповый сброс: 2000 л", "Полная автоматизация"],
-                    category: "premium",
-                    badge: "ПРЕМИУМ"
                 }
             ];
             
@@ -1621,7 +1610,7 @@
                         <div class="product-price">${product.price}</div>
                         <div class="product-actions">
                             <button class="btn" data-product-id="${product.id}">Подробнее</button>
-                            <button class="btn ${product.category === 'premium' ? 'btn-premium' : 'btn-outline'}" data-product-id="${product.id}">Заказать</button>
+                            <button class="btn btn-outline" data-product-id="${product.id}">Заказать</button>
                         </div>
                     </div>
                 `;
