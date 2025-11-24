@@ -1,5 +1,4 @@
-В РАЗРАБОТКЕ 10.1
-<!DOCTYPE html>
+Разработка 2.0
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -1181,6 +1180,7 @@
                 <button class="catalog-filter-btn active" data-filter="all">Все модели</button>
                 <button class="catalog-filter-btn" data-filter="vertical">Вертикальные станции</button>
                 <button class="catalog-filter-btn" data-filter="horizontal">Горизонтальные станции</button>
+                <button class="catalog-filter-btn" data-filter="large">Более 10 человек</button>
             </div>
             <div class="catalog-grid" id="catalogGrid">
                 <!-- Товары загружаются через JavaScript -->
@@ -1585,6 +1585,97 @@
                     features: ["Производительность: 2000 л/сут", "Залповый сброс: 800 л", "Глубина подводящей трубы: до 30 см"],
                     category: "horizontal",
                     badge: "Горизонтальная"
+                },
+                // Модели для более 10 человек
+                {
+                    id: 12,
+                    name: "АКВАЛОС 15 Un*",
+                    description: "Промышленная автономная канализация для больших объектов",
+                    price: "310 000 ₽",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    features: ["Производительность: 3000л/сут", "Залповый сброс: 1025л", "Глубина подводящей трубы: до 60 см", "Габариты: 1750×1750×2280"],
+                    category: "large",
+                    badge: "Промышленная"
+                },
+                {
+                    id: 13,
+                    name: "АКВАЛОС 20 Un*",
+                    description: "Промышленная автономная канализация повышенной производительности",
+                    price: "377 000 ₽",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    features: ["Производительность: 4000л/сут", "Залповый сброс: 1250л", "Глубина подводящей трубы: до 60 см", "Габариты: 2000×2000×2280"],
+                    category: "large",
+                    badge: "Промышленная"
+                },
+                {
+                    id: 14,
+                    name: "АКВАЛОС 30 Un*",
+                    description: "Профессиональная автономная канализация",
+                    price: "584 000 ₽",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    features: ["Производительность: 6000л/сут", "Залповый сброс: 1700л", "Глубина подводящей трубы: до 85 см", "Габариты: 2250×2250×2500"],
+                    category: "large",
+                    badge: "Профессиональная"
+                },
+                {
+                    id: 15,
+                    name: "АКВАЛОС 40",
+                    description: "Промышленная автономная канализация",
+                    price: "676 000 ₽",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    features: ["Производительность: 8000л/сут", "Залповый сброс: 2250л", "Глубина подводящей трубы: до 85 см", "Габариты: 2660×2000×2500"],
+                    category: "large",
+                    badge: "Промышленная"
+                },
+                {
+                    id: 16,
+                    name: "АКВАЛОС 50",
+                    description: "Промышленная автономная канализация",
+                    price: "882 000 ₽",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    features: ["Производительность: 9000л/сут", "Залповый сброс: 2700л", "Глубина подводящей трубы: до 85 см", "Габариты: 3160×2000×2500"],
+                    category: "large",
+                    badge: "Промышленная"
+                },
+                {
+                    id: 17,
+                    name: "АКВАЛОС 75",
+                    description: "Промышленная автономная канализация высокой производительности",
+                    price: "1 092 000 ₽",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    features: ["Производительность: 12000л/сут", "Залповый сброс: 3600л", "Глубина подводящей трубы: до 85 см", "Габариты: 4160×2000×2500"],
+                    category: "large",
+                    badge: "Высокая производительность"
+                },
+                {
+                    id: 18,
+                    name: "АКВАЛОС 100",
+                    description: "Промышленная автономная канализация для крупных объектов",
+                    price: "1 642 000 ₽",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    features: ["Производительность: 18000л/сут", "Залповый сброс: 4500л", "Глубина подводящей трубы: до 85 см", "Габариты: 5160×2000×2500"],
+                    category: "large",
+                    badge: "Для крупных объектов"
+                },
+                {
+                    id: 19,
+                    name: "АКВАЛОС 150",
+                    description: "Промышленная автономная канализация для промышленных объектов",
+                    price: "2 378 000 ₽",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    features: ["Производительность: 24000л/сут", "Залповый сброс: 6100л", "Глубина подводящей трубы: до 85 см", "Габариты: 4160×4000×2500"],
+                    category: "large",
+                    badge: "Промышленная"
+                },
+                {
+                    id: 20,
+                    name: "АКВАЛОС 200",
+                    description: "Промышленная автономная канализация максимальной производительности",
+                    price: "2 949 000 ₽",
+                    image: "https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg",
+                    features: ["Производительность: 35000л/сут", "Залповый сброс: 9000л", "Глубина подводящей трубы: до 85 см", "Габариты: 4160×4000×2500"],
+                    category: "large",
+                    badge: "Максимальная производительность"
                 }
             ];
             
@@ -1607,15 +1698,44 @@
                         </div>
                         <div class="product-price">${product.price}</div>
                         <div class="product-actions">
-                            <button class="btn" data-product-id="${product.id}">Подробнее</button>
-                            <button class="btn btn-outline" data-product-id="${product.id}">Заказать</button>
+                            <button class="btn btn-details" data-product-id="${product.id}">Подробнее</button>
+                            <button class="btn btn-outline btn-order" data-product-id="${product.id}">Заказать</button>
                         </div>
                     </div>
                 `;
                 catalogGrid.appendChild(productCard);
             });
             
+            // Добавляем обработчики для кнопок
+            document.querySelectorAll('.btn-details').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-product-id');
+                    showProductDetails(productId);
+                });
+            });
+            
+            document.querySelectorAll('.btn-order').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-product-id');
+                    orderProduct(productId);
+                });
+            });
+            
             initCatalogFilters();
+        }
+        
+        function showProductDetails(productId) {
+            // Здесь можно добавить модальное окно с подробной информацией о товаре
+            alert(`Подробная информация о товаре с ID: ${productId}. В будущем здесь будет модальное окно с детальным описанием.`);
+        }
+        
+        function orderProduct(productId) {
+            // Перенаправляем к форме заказа с предзаполненным полем
+            const productName = document.querySelector(`[data-product-id="${productId}"]`).closest('.product-card').querySelector('h3').textContent;
+            document.getElementById('message').value = `Интересует ${productName}`;
+            
+            // Плавная прокрутка к форме заказа
+            document.getElementById('contacts').scrollIntoView({ behavior: 'smooth' });
         }
         
         function initCatalogFilters() {
