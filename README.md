@@ -1,5 +1,3 @@
-Разработка 6.0
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -1180,8 +1178,9 @@
             <p class="section-subtitle">Выберите оптимальное решение для вашего объекта из нашего каталога</p>
             <div class="catalog-filters">
                 <button class="catalog-filter-btn active" data-filter="all">Все модели</button>
-                <button class="catalog-filter-btn" data-filter="vertical">Вертикальные</button>
-                <button class="catalog-filter-btn" data-filter="horizontal">Горизонтальные</button>
+                <button class="catalog-filter-btn" data-filter="vertical">Вертикальные станции</button>
+                <button class="catalog-filter-btn" data-filter="horizontal">Горизонтальные станции</button>
+                <button class="catalog-filter-btn" data-filter="premium">Премиум решения</button>
             </div>
             <div class="catalog-grid" id="catalogGrid">
                 <!-- Товары загружаются через JavaScript -->
@@ -1502,6 +1501,46 @@
                 },
                 {
                     id: 3,
+                    name: "АКВАЛОС 4 Un*",
+                    description: "Автономная канализация для загородного дома",
+                    price: "129 000 ₽",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    features: ["Производительность: 800л/сут", "Залповый сброс: 230л", "Глубина подводящей трубы: до 60 см"],
+                    category: "vertical",
+                    badge: "Универсальная"
+                },
+                {
+                    id: 4,
+                    name: "АКВАЛОС 5 Un*",
+                    description: "Автономная канализация для большого дома",
+                    price: "141 000 ₽",
+                    image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    features: ["Производительность: 900л/сут", "Залповый сброс: 320л", "Глубина подводящей трубы: до 60 см"],
+                    category: "vertical",
+                    badge: "Универсальная"
+                },
+                {
+                    id: 5,
+                    name: "АКВАЛОС 7 Un*",
+                    description: "Автономная канализация повышенной производительности",
+                    price: "171 000 ₽",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    features: ["Производительность: 1200л/сут", "Залповый сброс: 500л", "Глубина подводящей трубы: до 60 см"],
+                    category: "vertical",
+                    badge: "Универсальная"
+                },
+                {
+                    id: 6,
+                    name: "АКВАЛОС 8 Un*",
+                    description: "Профессиональная автономная канализация",
+                    price: "181 000 ₽",
+                    image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    features: ["Производительность: 1600л/сут", "Залповый сброс: 630л", "Глубина подводящей трубы: до 60 см"],
+                    category: "vertical",
+                    badge: "Универсальная"
+                },
+                {
+                    id: 7,
                     name: "АКВАЛОС 10 Un*",
                     description: "Промышленная автономная канализация",
                     price: "237 000 ₽",
@@ -1509,6 +1548,56 @@
                     features: ["Производительность: 2000л/сут", "Залповый сброс: 800л", "Глубина подводящей трубы: до 60 см"],
                     category: "vertical",
                     badge: "Универсальная"
+                },
+                {
+                    id: 8,
+                    name: "Горизонтальная станция АКВАЛОС 4",
+                    description: "Горизонтальная автономная канализация",
+                    price: "148 000 ₽",
+                    image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    features: ["Производительность: 800 л/сут", "Залповый сброс: 200 л", "Глубина подводящей трубы: до 30 см"],
+                    category: "horizontal",
+                    badge: "Горизонтальная"
+                },
+                {
+                    id: 9,
+                    name: "Горизонтальная станция АКВАЛОС 5",
+                    description: "Горизонтальная автономная канализация",
+                    price: "158 000 ₽",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    features: ["Производительность: 900 л/сут", "Залповый сброс: 300 л", "Глубина подводящей трубы: до 30 см"],
+                    category: "horizontal",
+                    badge: "Горизонтальная"
+                },
+                {
+                    id: 10,
+                    name: "Горизонтальная станция АКВАЛОС 7",
+                    description: "Горизонтальная автономная канализация",
+                    price: "194 000 ₽",
+                    image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    features: ["Производительность: 1200 л/сут", "Залповый сброс: 550 л", "Глубина подводящей трубы: до 30 см"],
+                    category: "horizontal",
+                    badge: "Горизонтальная"
+                },
+                {
+                    id: 11,
+                    name: "Горизонтальная станция АКВАЛОС 10",
+                    description: "Горизонтальная автономная канализация",
+                    price: "246 000 ₽",
+                    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    features: ["Производительность: 2000 л/сут", "Залповый сброс: 800 л", "Глубина подводящей трубы: до 30 см"],
+                    category: "horizontal",
+                    badge: "Горизонтальная"
+                },
+                {
+                    id: 12,
+                    name: "АКВАЛОС ПРЕМИУМ 15",
+                    description: "Элитная система для резиденций",
+                    price: "10 000 000 ₽",
+                    image: "https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                    features: ["Производительность: 5000 л/сут", "Залповый сброс: 2000 л", "Полная автоматизация"],
+                    category: "premium",
+                    badge: "ПРЕМИУМ"
                 }
             ];
             
@@ -1532,11 +1621,37 @@
                         <div class="product-price">${product.price}</div>
                         <div class="product-actions">
                             <button class="btn" data-product-id="${product.id}">Подробнее</button>
-                            <button class="btn btn-outline" data-product-id="${product.id}">Заказать</button>
+                            <button class="btn ${product.category === 'premium' ? 'btn-premium' : 'btn-outline'}" data-product-id="${product.id}">Заказать</button>
                         </div>
                     </div>
                 `;
                 catalogGrid.appendChild(productCard);
+            });
+            
+            initCatalogFilters();
+        }
+        
+        function initCatalogFilters() {
+            const filterButtons = document.querySelectorAll('.catalog-filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    const filter = button.getAttribute('data-filter');
+                    filterCatalog(filter);
+                });
+            });
+        }
+        
+        function filterCatalog(filter) {
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
             });
         }
 
