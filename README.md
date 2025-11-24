@@ -3,65 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0a3d62">
+    <meta name="theme-color" content="#0c1a2a">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>ИП Рахметов А.К. - Премиум автономные канализации Аквалос</title>
+    <title>AquaLux Elite - Премиум автономные канализации для элитной недвижимости</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <style>
         :root {
-            --primary: #0a3d62;
-            --primary-dark: #082a47;
-            --secondary: #d4af37;
-            --accent: #1e6fa3;
-            --dark: #1a1a2e;
+            --primary: #0c1a2a;
+            --primary-dark: #081220;
+            --primary-light: #1a2d45;
+            --secondary: #c9a96e;
+            --secondary-dark: #b89450;
+            --accent: #2a5a78;
+            --dark: #0a0f17;
             --light: #f8f9fa;
-            --gray: #6c757d;
+            --gray: #8a8f98;
             --white: #ffffff;
-            --black: #0a0a0a;
-            --shadow: 0 5px 15px rgba(0,0,0,0.08);
-            --transition: all 0.3s ease;
-            --gradient: linear-gradient(135deg, #0a3d62 0%, #1e6fa3 100%);
+            --black: #05080f;
+            --shadow: 0 10px 30px rgba(0,0,0,0.15);
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --gradient: linear-gradient(135deg, #0c1a2a 0%, #1a2d45 50%, #2a5a78 100%);
+            --gold-gradient: linear-gradient(135deg, #c9a96e 0%, #e6c260 50%, #f7d87c 100%);
         }
         
         /* Темная тема */
         .dark-theme {
-            --primary: #4dabf7;
-            --primary-dark: #339af0;
-            --secondary: #ffd700;
-            --accent: #5dade2;
-            --dark: #1a1a2e;
-            --light: #2d2d2d;
-            --gray: #a0a0a0;
-            --white: #e0e0e0;
-            --shadow: 0 5px 15px rgba(0,0,0,0.3);
-            --gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --primary: #1a2d45;
+            --primary-dark: #0c1a2a;
+            --primary-light: #2a4466;
+            --secondary: #e6c260;
+            --secondary-dark: #d4af37;
+            --accent: #3a7a9a;
+            --dark: #0a0f17;
+            --light: #1a1f2a;
+            --gray: #a0a5b0;
+            --white: #e8e8e8;
+            --black: #05080f;
+            --shadow: 0 10px 30px rgba(0,0,0,0.3);
+            --gradient: linear-gradient(135deg, #1a2d45 0%, #2a4466 50%, #3a7a9a 100%);
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
         }
         
         body {
             color: var(--dark);
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
             background-color: var(--white);
             transition: background-color 0.5s ease, color 0.5s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
         }
         
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
         
         a {
@@ -70,11 +82,13 @@
         }
         
         .btn {
-            display: inline-block;
-            background: var(--gradient);
-            color: var(--white);
-            padding: 14px 28px;
-            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gold-gradient);
+            color: var(--primary);
+            padding: 16px 32px;
+            border-radius: 50px;
             font-weight: 600;
             transition: var(--transition);
             border: none;
@@ -82,45 +96,49 @@
             font-size: 16px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(10, 61, 98, 0.2);
+            box-shadow: 0 8px 20px rgba(201, 169, 110, 0.3);
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.5px;
         }
         
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 7px 20px rgba(10, 61, 98, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(201, 169, 110, 0.4);
         }
         
         .btn-outline {
             background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+            box-shadow: none;
         }
         
         .btn-outline:hover {
-            background: var(--primary);
-            color: var(--white);
+            background: var(--secondary);
+            color: var(--primary);
         }
         
         .btn-premium {
-            background: linear-gradient(135deg, var(--secondary) 0%, #e6c260 100%);
-            color: var(--dark);
+            background: var(--gold-gradient);
+            color: var(--primary);
             font-weight: 700;
-            padding: 16px 32px;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            padding: 18px 36px;
+            font-size: 18px;
+            box-shadow: 0 10px 25px rgba(201, 169, 110, 0.4);
         }
         
         .btn-premium:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 7px 20px rgba(212, 175, 55, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 18px 35px rgba(201, 169, 110, 0.5);
         }
         
         section {
-            padding: 100px 0;
+            padding: 120px 0;
         }
         
         h2 {
-            font-size: 42px;
-            margin-bottom: 50px;
+            font-size: 48px;
+            margin-bottom: 20px;
             text-align: center;
             position: relative;
             font-weight: 700;
@@ -132,30 +150,31 @@
             bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
+            width: 100px;
             height: 4px;
-            background: var(--secondary);
+            background: var(--gold-gradient);
             border-radius: 2px;
         }
         
         .section-subtitle {
             text-align: center;
-            font-size: 18px;
+            font-size: 20px;
             color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 50px;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            line-height: 1.6;
         }
         
         /* Переключатель темы */
         .theme-toggle {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            background: var(--primary);
-            color: var(--white);
+            background: var(--gold-gradient);
+            color: var(--primary);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -163,21 +182,23 @@
             z-index: 1000;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            font-size: 24px;
         }
         
         .theme-toggle:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) rotate(15deg);
         }
         
         /* Шапка */
         header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: rgba(12, 26, 42, 0.95);
+            backdrop-filter: blur(10px);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             transition: var(--transition);
+            border-bottom: 1px solid rgba(201, 169, 110, 0.2);
         }
         
         header.scrolled {
@@ -189,21 +210,22 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            padding: 20px 0;
             transition: var(--transition);
         }
         
         .logo {
-            font-size: 22px;
+            font-size: 28px;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--white);
             display: flex;
             align-items: center;
+            font-family: 'Playfair Display', serif;
         }
         
         .logo i {
-            margin-right: 10px;
-            font-size: 28px;
+            margin-right: 12px;
+            font-size: 32px;
             color: var(--secondary);
         }
         
@@ -211,6 +233,8 @@
             font-size: 12px;
             color: var(--gray);
             margin-top: 2px;
+            letter-spacing: 1px;
+            font-family: 'Inter', sans-serif;
         }
         
         .desktop-nav ul {
@@ -219,14 +243,17 @@
         }
         
         .desktop-nav ul li {
-            margin-left: 25px;
+            margin-left: 30px;
             position: relative;
         }
         
         .desktop-nav ul li a {
             font-weight: 500;
             transition: var(--transition);
-            padding: 5px 0;
+            padding: 8px 0;
+            color: var(--white);
+            font-size: 16px;
+            letter-spacing: 0.5px;
         }
         
         .desktop-nav ul li a::after {
@@ -245,7 +272,7 @@
         }
         
         .desktop-nav ul li a:hover {
-            color: var(--primary);
+            color: var(--secondary);
         }
         
         .phone {
@@ -253,11 +280,22 @@
             font-size: 18px;
             display: flex;
             align-items: center;
+            color: var(--white);
+            background: rgba(201, 169, 110, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(201, 169, 110, 0.3);
+            transition: var(--transition);
+        }
+        
+        .phone:hover {
+            background: rgba(201, 169, 110, 0.2);
+            transform: translateY(-2px);
         }
         
         .phone i {
-            margin-right: 8px;
-            color: var(--primary);
+            margin-right: 10px;
+            color: var(--secondary);
         }
         
         .mobile-menu-btn {
@@ -266,7 +304,7 @@
             border: none;
             font-size: 24px;
             cursor: pointer;
-            color: var(--primary);
+            color: var(--white);
         }
         
         /* Мобильная навигация */
@@ -274,8 +312,8 @@
             display: none;
             width: 100%;
             text-align: center;
-            padding: 20px 0;
-            background: var(--white);
+            padding: 30px 0;
+            background: var(--primary);
             box-shadow: 0 5px 10px rgba(0,0,0,0.1);
         }
         
@@ -289,27 +327,29 @@
         }
         
         .mobile-nav ul li {
-            margin: 10px 0;
+            margin: 15px 0;
         }
         
         .mobile-nav ul li a {
             font-weight: 500;
-            padding: 10px 0;
+            padding: 12px 0;
             display: block;
             transition: var(--transition);
+            color: var(--white);
+            font-size: 18px;
         }
         
         .mobile-nav ul li a:hover {
-            color: var(--primary);
+            color: var(--secondary);
         }
         
         /* Герой секция */
         .hero {
-            background: linear-gradient(rgba(10, 61, 98, 0.85), rgba(10, 61, 98, 0.9)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(12, 26, 42, 0.9), rgba(12, 26, 42, 0.95)), url('https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
             color: var(--white);
             text-align: center;
-            padding: 220px 0 140px;
-            margin-top: 70px;
+            padding: 240px 0 160px;
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
         }
@@ -321,29 +361,36 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.05"><polygon fill="white" points="0,1000 1000,0 1000,1000"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.03"><polygon fill="white" points="0,1000 1000,0 1000,1000"/></svg>');
             background-size: cover;
         }
         
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
         .hero h1 {
-            font-size: 56px;
-            margin-bottom: 20px;
+            font-size: 68px;
+            margin-bottom: 30px;
             font-weight: 700;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            line-height: 1.2;
         }
         
         .hero p {
-            font-size: 22px;
-            margin-bottom: 40px;
-            max-width: 800px;
+            font-size: 24px;
+            margin-bottom: 50px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
             opacity: 0.9;
+            line-height: 1.6;
         }
         
         .hero-buttons {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -351,31 +398,45 @@
         /* Услуги */
         .services {
             background-color: var(--light);
+            position: relative;
+        }
+        
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.02"><polygon fill="%230c1a2a" points="50,0 100,50 50,100 0,50"/></svg>');
+            background-size: 200px;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 2;
         }
         
         .service-card {
             background-color: var(--white);
-            border-radius: 12px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
             position: relative;
-            border-top: 4px solid var(--secondary);
+            border-top: 5px solid var(--secondary);
         }
         
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
         
         .service-img {
-            height: 200px;
+            height: 240px;
             overflow: hidden;
             position: relative;
         }
@@ -388,58 +449,93 @@
         }
         
         .service-card:hover .service-img img {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
         
         .service-content {
-            padding: 25px;
+            padding: 30px;
         }
         
         .service-content h3 {
             margin-bottom: 15px;
-            font-size: 22px;
+            font-size: 24px;
             color: var(--primary);
+        }
+        
+        .service-content p {
+            color: var(--gray);
+            line-height: 1.6;
         }
         
         /* Каталог */
         .catalog-section {
-            padding: 100px 0;
-            background-color: var(--white);
+            padding: 120px 0;
+            background: var(--gradient);
+            color: white;
+            position: relative;
+        }
+        
+        .catalog-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.03"><circle fill="white" cx="50" cy="50" r="2"/></svg>');
+            background-size: 50px;
+        }
+        
+        .catalog-section h2 {
+            color: white;
+        }
+        
+        .catalog-section h2::after {
+            background: var(--gold-gradient);
+        }
+        
+        .catalog-section .section-subtitle {
+            color: rgba(255,255,255,0.8);
         }
         
         .catalog-filters {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 40px;
+            gap: 15px;
+            margin-bottom: 50px;
             justify-content: center;
         }
         
         .catalog-filter-btn {
-            padding: 10px 20px;
-            background: var(--light);
-            border: none;
-            border-radius: 25px;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
             cursor: pointer;
             transition: var(--transition);
             font-weight: 500;
+            color: white;
+            backdrop-filter: blur(10px);
         }
         
         .catalog-filter-btn.active,
         .catalog-filter-btn:hover {
-            background: var(--primary);
-            color: var(--white);
+            background: var(--gold-gradient);
+            color: var(--primary);
+            border-color: transparent;
         }
         
         .catalog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 2;
         }
         
         .product-card {
             background: var(--white);
-            border-radius: 12px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
@@ -448,12 +544,12 @@
         }
         
         .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
         }
         
         .product-img {
-            height: 220px;
+            height: 250px;
             overflow: hidden;
             position: relative;
             background-color: #f8f9fa;
@@ -472,80 +568,108 @@
         
         .product-badge {
             position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--secondary);
-            color: var(--dark);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
+            top: 20px;
+            right: 20px;
+            background: var(--gold-gradient);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(201, 169, 110, 0.3);
         }
         
         .product-content {
-            padding: 25px;
+            padding: 30px;
         }
         
         .product-content h3 {
-            margin-bottom: 10px;
-            font-size: 20px;
-            color: var(--dark);
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: var(--primary);
         }
         
         .product-content p {
             color: var(--gray);
-            font-size: 14px;
-            margin-bottom: 15px;
+            font-size: 16px;
+            margin-bottom: 20px;
             min-height: 60px;
+            line-height: 1.6;
         }
         
         .product-features {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
+            gap: 10px;
+            margin-bottom: 20px;
         }
         
         .product-feature {
             background: var(--light);
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 12px;
-            color: var(--dark);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            color: var(--primary);
+            border: 1px solid rgba(0,0,0,0.05);
         }
         
         .product-price {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .product-price::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 2px;
+            background: var(--gold-gradient);
+            margin-right: 15px;
         }
         
         .product-actions {
             display: flex;
-            gap: 10px;
+            gap: 15px;
         }
         
         .product-actions .btn {
             flex: 1;
-            padding: 12px;
-            font-size: 14px;
+            padding: 14px;
+            font-size: 16px;
         }
         
         /* Примеры работ */
         .portfolio-section {
-            padding: 100px 0;
+            padding: 120px 0;
             background-color: var(--light);
+            position: relative;
+        }
+        
+        .portfolio-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.02"><polygon fill="%230c1a2a" points="50,0 100,50 50,100 0,50"/></svg>');
+            background-size: 150px;
         }
         
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 2;
         }
         
         .portfolio-item {
-            border-radius: 12px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
@@ -553,12 +677,12 @@
         }
         
         .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
         
         .portfolio-img {
-            height: 250px;
+            height: 300px;
             overflow: hidden;
             position: relative;
         }
@@ -579,8 +703,8 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            padding: 20px;
+            background: linear-gradient(transparent, rgba(12, 26, 42, 0.9));
+            padding: 30px;
             color: white;
             transform: translateY(10px);
             opacity: 0;
@@ -593,203 +717,115 @@
         }
         
         .portfolio-overlay h3 {
-            margin-bottom: 5px;
-            font-size: 18px;
+            margin-bottom: 10px;
+            font-size: 22px;
         }
         
         .portfolio-overlay p {
-            font-size: 14px;
+            font-size: 16px;
             opacity: 0.9;
+            line-height: 1.6;
         }
         
         /* Секция преимуществ */
         .advantages-section {
-            padding: 100px 0;
-            background-color: var(--white);
+            padding: 120px 0;
+            background: var(--gradient);
+            color: white;
+            position: relative;
+        }
+        
+        .advantages-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.03"><circle fill="white" cx="50" cy="50" r="2"/></svg>');
+            background-size: 50px;
+        }
+        
+        .advantages-section h2 {
+            color: white;
+        }
+        
+        .advantages-section h2::after {
+            background: var(--gold-gradient);
+        }
+        
+        .advantages-section .section-subtitle {
+            color: rgba(255,255,255,0.8);
         }
         
         .advantages-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            gap: 40px;
+            margin-top: 60px;
+            position: relative;
+            z-index: 2;
         }
         
         .advantage-item {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: var(--shadow);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: var(--transition);
-            border-top: 4px solid var(--secondary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .advantage-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 0.15);
         }
         
         .advantage-item i {
-            font-size: 48px;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        
-        .advantage-item h3 {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--dark);
-        }
-        
-        /* Модальное окно товара */
-        .product-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .product-modal.active {
-            display: flex;
-            opacity: 1;
-        }
-        
-        .product-modal-content {
-            background: var(--white);
-            border-radius: 12px;
-            max-width: 900px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-        }
-        
-        .product-modal.active .product-modal-content {
-            transform: scale(1);
-        }
-        
-        .product-modal-close {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--gray);
-            z-index: 10;
-        }
-        
-        .product-modal-body {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        .product-modal-img {
-            flex: 1;
-            min-width: 300px;
-            height: 400px;
-            background-color: #f8f9fa;
-            overflow: hidden;
-        }
-        
-        .product-modal-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .product-modal-info {
-            flex: 1;
-            min-width: 300px;
-            padding: 30px;
-        }
-        
-        .product-modal-info h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-        
-        .product-modal-price {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        
-        .product-modal-description {
-            margin-bottom: 20px;
-            color: var(--gray);
-        }
-        
-        .product-modal-specs {
+            font-size: 54px;
+            color: var(--secondary);
             margin-bottom: 25px;
         }
         
-        .product-modal-specs h4 {
-            margin-bottom: 10px;
-            font-size: 18px;
-            color: var(--dark);
-        }
-        
-        .specs-list {
-            list-style: none;
-        }
-        
-        .specs-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .spec-name {
-            font-weight: 500;
-        }
-        
-        .spec-value {
-            color: var(--gray);
-        }
-        
-        .product-modal-actions {
-            display: flex;
-            gap: 15px;
-        }
-        
-        .product-modal-actions .btn {
-            flex: 1;
+        .advantage-item h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--white);
         }
         
         /* О компании */
         .about-section {
-            padding: 100px 0;
-            background: var(--gradient);
-            color: white;
+            padding: 120px 0;
+            background-color: var(--light);
+            position: relative;
+        }
+        
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.02"><polygon fill="%230c1a2a" points="50,0 100,50 50,100 0,50"/></svg>');
+            background-size: 200px;
         }
         
         .about {
             display: flex;
             align-items: center;
-            gap: 50px;
+            gap: 60px;
+            position: relative;
+            z-index: 2;
         }
         
         .about-img {
             flex: 1;
-            height: 450px;
-            border-radius: 12px;
+            height: 500px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--shadow);
         }
@@ -806,129 +842,173 @@
         
         .about-content h2 {
             text-align: left;
-            color: white;
         }
         
         .about-content h2::after {
             left: 0;
             transform: none;
-            background: var(--secondary);
         }
         
         .about-content p {
-            margin-bottom: 20px;
-            opacity: 0.9;
+            margin-bottom: 25px;
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: 17px;
         }
         
         .stats {
             display: flex;
             justify-content: space-between;
-            margin-top: 30px;
+            margin-top: 40px;
         }
         
         .stat-item {
             text-align: center;
+            flex: 1;
         }
         
         .stat-number {
-            font-size: 36px;
+            font-size: 42px;
             font-weight: 700;
-            color: var(--secondary);
+            color: var(--primary);
             display: block;
+            margin-bottom: 5px;
         }
         
         .stat-text {
-            font-size: 14px;
-            opacity: 0.8;
+            font-size: 16px;
+            color: var(--gray);
+            font-weight: 500;
         }
         
         /* Контакты */
         .contacts {
-            background-color: var(--light);
+            padding: 120px 0;
+            background: var(--gradient);
+            color: white;
+            position: relative;
+        }
+        
+        .contacts::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.03"><circle fill="white" cx="50" cy="50" r="2"/></svg>');
+            background-size: 50px;
+        }
+        
+        .contacts h2 {
+            color: white;
+        }
+        
+        .contacts h2::after {
+            background: var(--gold-gradient);
+        }
+        
+        .contacts .section-subtitle {
+            color: rgba(255,255,255,0.8);
         }
         
         .contacts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 2;
         }
         
         .contact-info {
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .contact-info h3 {
-            margin-bottom: 20px;
-            color: var(--primary);
+            margin-bottom: 25px;
+            color: var(--secondary);
+            font-size: 24px;
         }
         
         .contact-item {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             display: flex;
             align-items: flex-start;
         }
         
         .contact-item i {
-            margin-right: 10px;
-            color: var(--primary);
+            margin-right: 15px;
+            color: var(--secondary);
             width: 20px;
             text-align: center;
-            font-size: 18px;
+            font-size: 20px;
+            margin-top: 3px;
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             font-weight: 500;
+            color: rgba(255,255,255,0.9);
         }
         
         .form-control {
             width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            padding: 15px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
             font-size: 16px;
             transition: var(--transition);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            backdrop-filter: blur(10px);
         }
         
         .form-control:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(10, 61, 98, 0.1);
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.2);
             outline: none;
+        }
+        
+        .form-control::placeholder {
+            color: rgba(255,255,255,0.6);
         }
         
         /* Подвал */
         footer {
             background-color: var(--dark);
             color: var(--white);
-            padding: 60px 0 20px;
+            padding: 80px 0 30px;
         }
         
         .footer-content {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 40px;
+            gap: 40px;
+            margin-bottom: 50px;
         }
         
         .footer-column {
             flex: 1;
-            min-width: 200px;
+            min-width: 250px;
         }
         
         .footer-column h3 {
-            margin-bottom: 20px;
-            font-size: 18px;
+            margin-bottom: 25px;
+            font-size: 20px;
             position: relative;
             padding-bottom: 10px;
+            color: var(--secondary);
         }
         
         .footer-column h3::after {
@@ -936,106 +1016,59 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 30px;
+            width: 40px;
             height: 2px;
             background: var(--secondary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            transition: var(--transition);
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
         }
         
         .social-links {
             display: flex;
             gap: 15px;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         
         .social-links a {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             transition: var(--transition);
+            font-size: 18px;
         }
         
         .social-links a:hover {
             background: var(--secondary);
-            color: var(--dark);
-            transform: translateY(-3px);
+            color: var(--primary);
+            transform: translateY(-5px);
         }
         
         .copyright {
             text-align: center;
-            padding-top: 20px;
+            padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        /* Модальное окно */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .modal.active {
-            display: flex;
-            opacity: 1;
-        }
-        
-        .modal-content {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 30px;
-            max-width: 500px;
-            width: 90%;
-            position: relative;
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-        }
-        
-        .modal.active .modal-content {
-            transform: scale(1);
-        }
-        
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--gray);
-        }
-        
-        .notification {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 15px 25px;
-            background: var(--primary);
-            color: var(--white);
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            transform: translateX(150%);
-            transition: transform 0.3s;
-            z-index: 1000;
-        }
-        
-        .notification.show {
-            transform: translateX(0);
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.6);
         }
         
         /* Анимация загрузки */
@@ -1045,8 +1078,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--white);
+            background: var(--primary);
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             z-index: 9999;
@@ -1059,12 +1093,20 @@
         }
         
         .loader {
-            width: 50px;
-            height: 50px;
-            border: 5px solid rgba(10, 61, 98, 0.2);
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(201, 169, 110, 0.2);
             border-radius: 50%;
-            border-top-color: var(--primary);
+            border-top-color: var(--secondary);
             animation: spin 1s ease-in-out infinite;
+            margin-bottom: 20px;
+        }
+        
+        .loading-text {
+            color: var(--secondary);
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-weight: 500;
         }
         
         @keyframes spin {
@@ -1072,6 +1114,20 @@
         }
         
         /* Адаптивность */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+            
+            h2 {
+                font-size: 42px;
+            }
+            
+            .hero h1 {
+                font-size: 58px;
+            }
+        }
+        
         @media (max-width: 992px) {
             .about {
                 flex-direction: column;
@@ -1089,6 +1145,14 @@
             .stats {
                 justify-content: space-around;
             }
+            
+            .hero h1 {
+                font-size: 48px;
+            }
+            
+            .hero p {
+                font-size: 20px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -1105,13 +1169,17 @@
             }
             
             .phone {
-                margin-top: 10px;
+                margin-top: 15px;
                 width: 100%;
                 justify-content: center;
             }
             
+            .hero {
+                padding: 180px 0 100px;
+            }
+            
             .hero h1 {
-                font-size: 36px;
+                font-size: 38px;
             }
             
             .hero p {
@@ -1128,56 +1196,43 @@
                 max-width: 300px;
             }
             
-            .product-modal-body {
-                flex-direction: column;
+            section {
+                padding: 80px 0;
             }
             
-            .product-modal-img {
-                height: 250px;
+            h2 {
+                font-size: 36px;
+            }
+            
+            .catalog-grid, .services-grid, .portfolio-grid, .advantages-grid {
+                grid-template-columns: 1fr;
             }
             
             .stats {
                 flex-direction: column;
-                gap: 20px;
+                gap: 30px;
             }
         }
         
         @media (max-width: 576px) {
-            section {
-                padding: 60px 0;
-            }
-            
-            h2 {
-                font-size: 28px;
-            }
-            
-            .hero {
-                padding: 150px 0 80px;
+            .container {
+                padding: 0 15px;
             }
             
             .hero h1 {
                 font-size: 32px;
-                line-height: 1.2;
             }
             
             .hero p {
-                font-size: 18px;
+                font-size: 16px;
             }
             
-            .catalog-grid {
-                grid-template-columns: 1fr;
+            h2 {
+                font-size: 30px;
             }
             
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .advantages-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr;
+            .section-subtitle {
+                font-size: 16px;
             }
             
             .product-modal-body {
@@ -1198,11 +1253,6 @@
                 flex-direction: column;
             }
             
-            .stats {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
             .contact-item {
                 flex-direction: column;
                 align-items: flex-start;
@@ -1218,6 +1268,7 @@
     <!-- Анимация загрузки -->
     <div class="loading-animation" id="loadingAnimation">
         <div class="loader"></div>
+        <div class="loading-text">AQUALUX ELITE</div>
     </div>
 
     <!-- Шапка -->
@@ -1225,10 +1276,10 @@
         <div class="container">
             <div class="header-inner">
                 <div class="logo">
-                    <i class="fas fa-tint"></i>
+                    <i class="fas fa-water"></i>
                     <div>
-                        ИП Рахметов А.К.
-                        <div class="logo-subtitle">Премиум автономные канализации</div>
+                        AquaLux Elite
+                        <div class="logo-subtitle">ПРЕМИУМ РЕШЕНИЯ ДЛЯ ЭЛИТНОЙ НЕДВИЖИМОСТИ</div>
                     </div>
                 </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню">
@@ -1238,22 +1289,22 @@
                     <ul>
                         <li><a href="#services">Услуги</a></li>
                         <li><a href="#catalog">Каталог</a></li>
-                        <li><a href="#portfolio">Примеры работ</a></li>
-                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#portfolio">Проекты</a></li>
+                        <li><a href="#about">О нас</a></li>
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="phone">
                     <i class="fas fa-phone"></i>
-                    +7 (3532) 123-45-67
+                    +7 (495) 123-45-67
                 </div>
             </div>
             <nav class="mobile-nav" id="mobileNav">
                 <ul>
                     <li><a href="#services">Услуги</a></li>
                     <li><a href="#catalog">Каталог</a></li>
-                    <li><a href="#portfolio">Примеры работ</a></li>
-                    <li><a href="#about">О компании</a></li>
+                    <li><a href="#portfolio">Проекты</a></li>
+                    <li><a href="#about">О нас</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
@@ -1263,11 +1314,13 @@
     <!-- Герой секция -->
     <section class="hero" id="hero">
         <div class="container">
-            <h1>Премиум автономные канализации Аквалос</h1>
-            <p>Элитные системы биологической очистки для загородных резиденций и коммерческих объектов в Оренбурге и области</p>
-            <div class="hero-buttons">
-                <a href="#catalog" class="btn btn-premium">Смотреть каталог</a>
-                <a href="#contacts" class="btn btn-outline">Бесплатная консультация</a>
+            <div class="hero-content">
+                <h1>ЭКСКЛЮЗИВНЫЕ АВТОНОМНЫЕ КАНАЛИЗАЦИИ ДЛЯ ВАШЕЙ РЕЗИДЕНЦИИ</h1>
+                <p>Инженерные решения премиум-класса для загородных резиденций, элитных коттеджей и коммерческих объектов. Бескомпромиссное качество и полная автоматизация.</p>
+                <div class="hero-buttons">
+                    <a href="#catalog" class="btn btn-premium">СМОТРЕТЬ КАТАЛОГ</a>
+                    <a href="#contacts" class="btn btn-outline">КОНСУЛЬТАЦИЯ ЭКСПЕРТА</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1275,34 +1328,34 @@
     <!-- Услуги -->
     <section id="services" class="services">
         <div class="container">
-            <h2>Наши услуги</h2>
-            <p class="section-subtitle">Мы предлагаем полный комплекс услуг по установке и обслуживанию автономных канализационных систем премиум-класса</p>
+            <h2>ЭКСКЛЮЗИВНЫЕ УСЛУГИ</h2>
+            <p class="section-subtitle">Мы предлагаем полный комплекс премиальных услуг по проектированию, установке и обслуживанию автономных канализационных систем для объектов высшего класса</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Монтаж автономной канализации">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Проектирование и монтаж">
                     </div>
                     <div class="service-content">
-                        <h3>Монтаж премиум канализации</h3>
-                        <p>Профессиональная установка септиков Аквалос для элитных частных домов, резиденций и коммерческих объектов в Оренбурге и области.</p>
+                        <h3>ИНДИВИДУАЛЬНОЕ ПРОЕКТИРОВАНИЕ</h3>
+                        <p>Разработка эксклюзивных инженерных решений с учетом архитектурных особенностей вашей резиденции и ландшафта территории.</p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Обслуживание септиков">
+                        <img src="https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="VIP обслуживание">
                     </div>
                     <div class="service-content">
-                        <h3>VIP обслуживание септиков</h3>
-                        <p>Регулярное обслуживание, чистка и ремонт автономных канализационных систем Аквалос с гарантией качества.</p>
+                        <h3>VIP ОБСЛУЖИВАНИЕ</h3>
+                        <p>Круглосуточный сервис премиум-класса с выездом специалистов в течение 2 часов и гарантией на все виды работ.</p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Доставка и установка">
+                        <img src="https://images.unsplash.com/photo-1581094794368-3fbb8f2e7b38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Умные системы">
                     </div>
                     <div class="service-content">
-                        <h3>Доставка и установка</h3>
-                        <p>Быстрая доставка и профессиональный монтаж септиков Аквалос в Оренбурге и Оренбургской области.</p>
+                        <h3>УМНЫЕ ТЕХНОЛОГИИ</h3>
+                        <p>Интеграция систем в умный дом с возможностью удаленного мониторинга и управления через мобильное приложение.</p>
                     </div>
                 </div>
             </div>
@@ -1312,13 +1365,13 @@
     <!-- Каталог -->
     <section id="catalog" class="catalog-section">
         <div class="container">
-            <h2>Каталог премиум канализаций Аквалос</h2>
-            <p class="section-subtitle">Выберите оптимальное решение для вашего объекта из нашего каталога элитных автономных канализационных систем</p>
+            <h2>ЭКСКЛЮЗИВНЫЕ РЕШЕНИЯ</h2>
+            <p class="section-subtitle">Индивидуально разработанные системы для объектов высшего класса с безупречной эстетикой и максимальной эффективностью</p>
             <div class="catalog-filters">
-                <button class="catalog-filter-btn active" data-filter="all">Все модели</button>
-                <button class="catalog-filter-btn" data-filter="vertical">Вертикальные станции</button>
-                <button class="catalog-filter-btn" data-filter="horizontal">Горизонтальные станции</button>
-                <button class="catalog-filter-btn" data-filter="premium">Премиум решения</button>
+                <button class="catalog-filter-btn active" data-filter="all">ВСЕ СИСТЕМЫ</button>
+                <button class="catalog-filter-btn" data-filter="residential">ДЛЯ РЕЗИДЕНЦИЙ</button>
+                <button class="catalog-filter-btn" data-filter="commercial">ДЛЯ КОММЕРЦИИ</button>
+                <button class="catalog-filter-btn" data-filter="premium">ПРЕМИУМ КОЛЛЕКЦИЯ</button>
             </div>
             <div class="catalog-grid" id="catalogGrid">
                 <!-- Товары будут загружены через JavaScript -->
@@ -1329,34 +1382,34 @@
     <!-- Примеры работ -->
     <section id="portfolio" class="portfolio-section">
         <div class="container">
-            <h2>Примеры выполненных работ</h2>
-            <p class="section-subtitle">Реализованные проекты автономных канализационных систем для частных резиденций и коммерческих объектов</p>
+            <h2>РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</h2>
+            <p class="section-subtitle">Эксклюзивные решения для самых требовательных клиентов — от частных резиденций до коммерческих объектов премиум-класса</p>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Загородный дом">
+                        <img src="https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Резиденция на Рублевке">
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>Загородная резиденция</h3>
-                        <p>Установка АКВАЛОС 10 Un* для дома площадью 450 м²</p>
+                        <h3>РЕЗИДЕНЦИЯ НА РУБЛЕВКЕ</h3>
+                        <p>Полностью автоматизированная система для особняка площадью 1200 м² с интеграцией в умный дом</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Коттеджный поселок">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Загородный клуб">
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>Коттеджный поселок</h3>
-                        <p>Комплексное решение для 15 домов</p>
+                        <h3>ЗАГОРОДНЫЙ КЛУБ PREMIUM</h3>
+                        <p>Комплексное решение для объекта площадью 5 га с рестораном, спа-комплексом и гостиницей</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-img">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Ресторан">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Эко-резорт">
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>Ресторан премиум-класса</h3>
-                        <p>Установка промышленной системы очистки</p>
+                        <h3>ЭКО-РЕЗОРТ "ЗОЛОТОЙ БЕРЕГ"</h3>
+                        <p>Система с рециркуляцией воды для премиального курорта на 50 гостевых вилл</p>
                     </div>
                 </div>
             </div>
@@ -1366,107 +1419,44 @@
     <!-- Преимущества -->
     <section class="advantages-section">
         <div class="container">
-            <h2>17 преимуществ септика Аквалос</h2>
-            <p class="section-subtitle">Почему наши клиенты выбирают автономные канализации Аквалос для своих премиум объектов</p>
+            <h2>ПРЕИМУЩЕСТВА AQUALUX ELITE</h2>
+            <p class="section-subtitle">Технологии, которые устанавливают новые стандарты в области автономных канализационных систем для элитной недвижимости</p>
             <div class="advantages-grid">
                 <div class="advantage-item">
-                    <i class="fas fa-ruble-sign"></i>
-                    <h3>Оптимальное соотношение цена - качество</h3>
+                    <i class="fas fa-microchip"></i>
+                    <h3>ПОЛНАЯ АВТОМАТИЗАЦИЯ</h3>
                 </div>
                 <div class="advantage-item">
-                    <i class="fas fa-warehouse"></i>
-                    <h3>Постоянное наличие на складе</h3>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>УДАЛЕННОЕ УПРАВЛЕНИЕ</h3>
                 </div>
                 <div class="advantage-item">
-                    <i class="fas fa-calendar-check"></i>
-                    <h3>Три рабочих дня до пользования станцией</h3>
-                </div>
-                <div class="advantage-item">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Малое электропотребление</h3>
-                </div>
-                <div class="advantage-item">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Отсутствие часто ломающихся устройств</h3>
-                </div>
-                <div class="advantage-item">
-                    <i class="fas fa-power-off"></i>
-                    <h3>Работает при отсутствии электроэнергии (до 7 суток)</h3>
-                </div>
-                <div class="advantage-item">
-                    <i class="fas fa-wind"></i>
-                    <h3>Полное отсутствие запаха</h3>
-                </div>
-                <div class="advantage-item">
-                    <i class="fas fa-snowflake"></i>
-                    <h3>Работа при любых экстремальных погодных условиях</h3>
+                    <i class="fas fa-recycle"></i>
+                    <h3>РЕЦИРКУЛЯЦИЯ ВОДЫ</h3>
                 </div>
                 <div class="advantage-item">
                     <i class="fas fa-shield-alt"></i>
-                    <h3>Гарантия на корпус 50 лет</h3>
+                    <h3>МНОГОУРОВНЕВАЯ ЗАЩИТА</h3>
                 </div>
                 <div class="advantage-item">
-                    <i class="fas fa-tint"></i>
-                    <h3>Нечувствительность к пиковым потокам</h3>
+                    <i class="fas fa-leaf"></i>
+                    <h3>ЭКОЛОГИЧЕСКАЯ БЕЗОПАСНОСТЬ</h3>
                 </div>
                 <div class="advantage-item">
-                    <i class="fas fa-filter"></i>
-                    <h3>Степень очистки 96-98%</h3>
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>ВЫСОКАЯ ПРОИЗВОДИТЕЛЬНОСТЬ</h3>
                 </div>
                 <div class="advantage-item">
-                    <i class="fas fa-flask"></i>
-                    <h3>Не используются химические вещества</h3>
+                    <i class="fas fa-infinity"></i>
+                    <h3>ПОЖИЗНЕННАЯ ГАРАНТИЯ</h3>
                 </div>
                 <div class="advantage-item">
                     <i class="fas fa-user-cog"></i>
-                    <h3>Самостоятельное обслуживание</h3>
-                </div>
-                <div class="advantage-item">
-                    <i class="fas fa-volume-mute"></i>
-                    <h3>Низкий уровень шума</h3>
-                </div>
-                <div class="advantage-item">
-                    <i class="fas fa-hand-holding-usd"></i>
-                    <h3>Возможность оплаты после сдачи объекта</h3>
-                </div>
-                <div class="advantage-item">
-                    <i class="fas fa-truck-loading"></i>
-                    <h3>Не нужна ассенизаторская машина</h3>
-                </div>
-                <div class="advantage-item">
-                    <i class="fas fa-exchange-alt"></i>
-                    <h3>Простота переоборудования</h3>
+                    <h3>ПЕРСОНАЛЬНЫЙ ИНЖЕНЕР</h3>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Модальное окно товара -->
-    <div class="product-modal" id="productModal">
-        <div class="product-modal-content">
-            <button class="product-modal-close" id="productModalClose" aria-label="Закрыть">&times;</button>
-            <div class="product-modal-body">
-                <div class="product-modal-img">
-                    <img src="" alt="" id="modalProductImage">
-                </div>
-                <div class="product-modal-info">
-                    <h3 id="modalProductName"></h3>
-                    <div class="product-modal-price" id="modalProductPrice"></div>
-                    <div class="product-modal-description" id="modalProductDescription"></div>
-                    <div class="product-modal-specs">
-                        <h4>Характеристики</h4>
-                        <ul class="specs-list" id="modalProductSpecs">
-                            <!-- Спецификации будут добавлены через JavaScript -->
-                        </ul>
-                    </div>
-                    <div class="product-modal-actions">
-                        <button class="btn btn-premium" id="modalProductOrder">Заказать</button>
-                        <button class="btn btn-outline" id="modalProductConsult">Консультация</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- О компании -->
     <section id="about" class="about-section">
@@ -1476,21 +1466,21 @@
                     <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="О компании">
                 </div>
                 <div class="about-content">
-                    <h2>О компании</h2>
-                    <p><strong>ИП Рахметов А.К.</strong> (ИНН 561902398552) специализируется на установке автономных канализационных систем премиум-класса с 2010 года. Мы являемся официальными дилерами систем Аквалос в Оренбурге и Оренбургской области.</p>
-                    <p>Наша команда состоит из опытных специалистов, которые используют современное оборудование и материалы для обеспечения высокого качества работ. Мы работаем с элитными загородными резиденциями, коммерческими объектами и коттеджными поселками.</p>
+                    <h2>О КОМПАНИИ AQUALUX ELITE</h2>
+                    <p><strong>AquaLux Elite</strong> — эксклюзивный поставщик инженерных решений для элитной недвижимости. Мы специализируемся на создании автономных канализационных систем премиум-класса для загородных резиденций, коммерческих объектов и гостиничных комплексов высшей категории.</p>
+                    <p>Наша команда состоит из ведущих инженеров и технологов, которые используют передовые разработки и материалы для обеспечения безупречного качества работ. Каждый проект — это уникальное решение, разработанное с учетом архитектурных особенностей объекта и пожеланий клиента.</p>
                     <div class="stats">
                         <div class="stat-item">
                             <span class="stat-number" id="yearsCounter">0</span>
-                            <span class="stat-text">Лет опыта</span>
+                            <span class="stat-text">ЛЕТ НА РЫНКЕ</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" id="projectsCounter">0</span>
-                            <span class="stat-text">Установленных систем</span>
+                            <span class="stat-text">РЕАЛИЗОВАННЫХ ПРОЕКТОВ</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" id="clientsCounter">0</span>
-                            <span class="stat-text">Довольных клиентов</span>
+                            <span class="stat-text">ДОВОЛЬНЫХ КЛИЕНТОВ</span>
                         </div>
                     </div>
                 </div>
@@ -1501,66 +1491,62 @@
     <!-- Контакты -->
     <section id="contacts" class="contacts">
         <div class="container">
-            <h2>Контакты</h2>
-            <p class="section-subtitle">Свяжитесь с нами для получения бесплатной консультации и расчета стоимости автономной канализации для вашего объекта</p>
+            <h2>КОНТАКТЫ</h2>
+            <p class="section-subtitle">Свяжитесь с нами для получения персональной консультации и расчета стоимости эксклюзивного решения для вашего объекта</p>
             <div class="contacts-grid">
                 <div class="contact-info">
-                    <h3>Контактная информация</h3>
+                    <h3>КОНТАКТНАЯ ИНФОРМАЦИЯ</h3>
                     <div class="contact-item">
                         <i class="fas fa-user-tie"></i>
-                        <div><strong>ИП Рахметов А.К.</strong></div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-id-card"></i>
-                        <div>ИНН: 561902398552</div>
+                        <div><strong>AquaLux Elite</strong></div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <div>г. Оренбург, ул. Примерная, д. 123</div>
+                        <div>Москва, Рублевское шоссе, д. 28</div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <div>+7 (3532) 123-45-67</div>
+                        <div>+7 (495) 123-45-67</div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <div>info@rahmetov-orenburg.ru</div>
+                        <div>info@aqualux-elite.ru</div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
-                        <div>Пн-Пт: 9:00-18:00</div>
+                        <div>Пн-Пт: 9:00-20:00, Сб: 10:00-18:00</div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marked-alt"></i>
-                        <div>Работаем по всему Оренбургу и области</div>
+                        <div>Работаем по всей России и СНГ</div>
                     </div>
                     <div class="social-links">
                         <a href="https://vk.com" target="_blank" aria-label="ВКонтакте"><i class="fab fa-vk"></i></a>
                         <a href="https://t.me" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                        <a href="https://wa.me/735321234567" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/74951234567" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="contact-info">
-                    <h3>Форма обратной связи</h3>
+                    <h3>ЗАПРОС КОНСУЛЬТАЦИИ</h3>
                     <form id="contact-form">
                         <div class="form-group">
                             <label for="name">Ваше имя</label>
-                            <input type="text" id="name" class="form-control" required>
+                            <input type="text" id="name" class="form-control" required placeholder="Иван Иванов">
                         </div>
                         <div class="form-group">
                             <label for="phone">Ваш телефон</label>
-                            <input type="tel" id="phone" class="form-control" required>
+                            <input type="tel" id="phone" class="form-control" required placeholder="+7 (XXX) XXX-XX-XX">
                         </div>
                         <div class="form-group">
-                            <label for="location">Ваш населенный пункт</label>
-                            <input type="text" id="location" class="form-control" placeholder="Оренбург или область">
+                            <label for="location">Местоположение объекта</label>
+                            <input type="text" id="location" class="form-control" placeholder="Московская область">
                         </div>
                         <div class="form-group">
-                            <label for="message">Сообщение</label>
-                            <textarea id="message" class="form-control" rows="4" placeholder="Интересует автономная канализация Аквалос..."></textarea>
+                            <label for="message">Дополнительная информация</label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Площадь объекта, особенности участка, пожелания..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-premium">Отправить</button>
+                        <button type="submit" class="btn btn-premium">ОТПРАВИТЬ ЗАПРОС</button>
                     </form>
                 </div>
             </div>
@@ -1572,38 +1558,38 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Компания</h3>
+                    <h3>КОМПАНИЯ</h3>
                     <ul>
                         <li><a href="#about">О нас</a></li>
                         <li><a href="#services">Услуги</a></li>
                         <li><a href="#catalog">Каталог</a></li>
-                        <li><a href="#portfolio">Примеры работ</a></li>
+                        <li><a href="#portfolio">Проекты</a></li>
                         <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Услуги</h3>
+                    <h3>УСЛУГИ</h3>
                     <ul>
-                        <li><a href="#services">Автономная канализация</a></li>
-                        <li><a href="#services">Монтаж септиков</a></li>
+                        <li><a href="#services">Проектирование</a></li>
+                        <li><a href="#services">Монтаж систем</a></li>
                         <li><a href="#services">Обслуживание</a></li>
                         <li><a href="#services">Консультации</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Контакты</h3>
+                    <h3>КОНТАКТЫ</h3>
                     <ul>
-                        <li><strong>ИП Рахметов А.К.</strong></li>
-                        <li>ИНН: 561902398552</li>
-                        <li>+7 (3532) 123-45-67</li>
-                        <li>info@rahmetov-orenburg.ru</li>
-                        <li>г. Оренбург, ул. Примерная, д. 123</li>
-                        <li>Работаем по Оренбургу и области</li>
+                        <li><strong>AquaLux Elite</strong></li>
+                        <li>Москва, Рублевское шоссе, д. 28</li>
+                        <li>+7 (495) 123-45-67</li>
+                        <li>info@aqualux-elite.ru</li>
+                        <li>Пн-Пт: 9:00-20:00</li>
+                        <li>Сб: 10:00-18:00</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2025 ИП Рахметов А.К. (ИНН 561902398552). Все права защищены. Обслуживаем Оренбург и Оренбургскую область.
+                &copy; 2025 AquaLux Elite. Все права защищены. Эксклюзивные инженерные решения для элитной недвижимости.
             </div>
         </div>
     </footer>
@@ -1613,471 +1599,102 @@
         <i class="fas fa-moon" id="themeIcon"></i>
     </div>
 
-    <!-- Модальное окно -->
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <button class="close-modal" id="closeModal" aria-label="Закрыть">&times;</button>
-            <h3>Быстрая консультация</h3>
-            <form id="quick-form">
-                <div class="form-group">
-                    <label for="quick-name">Ваше имя</label>
-                    <input type="text" id="quick-name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="quick-phone">Ваш телефон</label>
-                    <input type="tel" id="quick-phone" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="quick-location">Ваш населенный пункт</label>
-                    <input type="text" id="quick-location" class="form-control" placeholder="Оренбург или область">
-                </div>
-                <button type="submit" class="btn btn-premium">Позвоните мне</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Уведомление -->
-    <div class="notification" id="notification">
-        Сообщение отправлено успешно!
-    </div>
-
     <script>
-        // Обновленные данные товаров с премиум позициями
+        // Данные товаров для премиум сайта
         const products = [
             {
                 id: 1,
-                name: "АКВАЛОС 2 Un*",
-                description: "Автономная канализация для дома и дачи",
-                price: "101 000 ₽",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 400л/сут", "Залповый сброс: 120л", "Глубина подводящей трубы: до 30 см"],
-                category: "vertical",
-                badge: "Универсальная",
-                fullDescription: "Автономная канализация АКВАЛОС 2 Un* предназначена для использования в частных домах и на дачах. Способ отведения воды: универсальная.",
+                name: "AQUALUX RESIDENCE 500",
+                description: "Автономная система для резиденций до 500 м²",
+                price: "5 800 000 ₽",
+                image: "https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                features: ["Производительность: 5000л/сут", "Умное управление", "Рециркуляция воды"],
+                category: "residential",
+                badge: "РЕЗИДЕНЦИЯ",
+                fullDescription: "AQUALUX RESIDENCE 500 — это премиальное решение для загородных резиденций площадью до 500 м². Система обеспечивает полную автономность и интеграцию в умный дом.",
                 specifications: [
-                    { name: "Способ отведения воды", value: "Универсальная" },
-                    { name: "Производительность", value: "400л/сут" },
-                    { name: "Залповый сброс", value: "120л" },
-                    { name: "Глубина подводящей трубы", value: "До 30 см" },
-                    { name: "Габаритные размеры Д*Ш*В", value: "860*860*1500" }
+                    { name: "Производительность", value: "5000 л/сут" },
+                    { name: "Управление", value: "Умная система с приложением" },
+                    { name: "Рециркуляция", value: "До 80% воды" },
+                    { name: "Гарантия", value: "10 лет" },
+                    { name: "Обслуживание", value: "VIP сервис 24/7" }
                 ]
             },
             {
                 id: 2,
-                name: "АКВАЛОС 3 Un*",
-                description: "Автономная канализация для частного дома",
-                price: "113 000 ₽",
-                image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 600л/сут", "Залповый сброс: 200л", "Глубина подводящей трубы: до 50 см"],
-                category: "vertical",
-                badge: "Универсальная",
-                fullDescription: "Автономная канализация АКВАЛОС 3 Un* предназначена для использования в частных домах. Способ отведения воды: универсальная.",
+                name: "AQUALUX COMMERCIAL 1000",
+                description: "Промышленная система для коммерческих объектов",
+                price: "12 500 000 ₽",
+                image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                features: ["Производительность: 10000л/сут", "Промышленная очистка", "Мониторинг онлайн"],
+                category: "commercial",
+                badge: "КОММЕРЦИЯ",
+                fullDescription: "AQUALUX COMMERCIAL 1000 предназначена для гостиниц, ресторанов и бизнес-центров. Обеспечивает бесперебойную работу при пиковых нагрузках.",
                 specifications: [
-                    { name: "Способ отведения воды", value: "Универсальная" },
-                    { name: "Производительность", value: "600л/сут" },
-                    { name: "Залповый сброс", value: "200л" },
-                    { name: "Глубина подводящей трубы", value: "До 50 см" },
-                    { name: "Габаритные размеры Д*Ш*В", value: "860*860*1850" }
+                    { name: "Производительность", value: "10000 л/сут" },
+                    { name: "Очистка", value: "Многоступенчатая промышленная" },
+                    { name: "Мониторинг", value: "Онлайн 24/7" },
+                    { name: "Гарантия", value: "7 лет" },
+                    { name: "Обслуживание", value: "Техническая поддержка" }
                 ]
             },
             {
                 id: 3,
-                name: "АКВАЛОС 4 Un*",
-                description: "Автономная канализация для загородного дома",
-                price: "129 000 ₽",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 800л/сут", "Залповый сброс: 230л", "Глубина подводящей трубы: до 60 см"],
-                category: "vertical",
-                badge: "Универсальная",
-                fullDescription: "Автономная канализация АКВАЛОС 4 Un* предназначена для использования в загородных домах. Способ отведения воды: универсальная.",
+                name: "AQUALUX ELITE ULTIMATE",
+                description: "Эксклюзивная система для объектов премиум-класса",
+                price: "25 000 000 ₽",
+                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                features: ["Неограниченная производительность", "Полная автоматизация", "Эксклюзивный дизайн"],
+                category: "premium",
+                badge: "ЭКСКЛЮЗИВ",
+                fullDescription: "AQUALUX ELITE ULTIMATE — это вершина инженерной мысли для самых требовательных клиентов. Полностью автоматизированная система с уникальным дизайном и максимальной эффективностью.",
                 specifications: [
-                    { name: "Способ отведения воды", value: "Универсальная" },
-                    { name: "Производительность", value: "800л/сут" },
-                    { name: "Залповый сброс", value: "230л" },
-                    { name: "Глубина подводящей трубы", value: "До 60 см" },
-                    { name: "Габаритные размеры Д*Ш*В", value: "860*860*2280" }
+                    { name: "Производительность", value: "Неограниченная" },
+                    { name: "Автоматизация", value: "Полная с ИИ" },
+                    { name: "Дизайн", value: "Индивидуальный" },
+                    { name: "Гарантия", value: "Пожизненная" },
+                    { name: "Обслуживание", value: "Персональный инженер" }
                 ]
             },
             {
                 id: 4,
-                name: "АКВАЛОС 5 Un*",
-                description: "Автономная канализация для большого дома",
-                price: "141 000 ₽",
-                image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 900л/сут", "Залповый сброс: 320л", "Глубина подводящей трубы: до 60 см"],
-                category: "vertical",
-                badge: "Универсальная",
-                fullDescription: "Автономная канализация АКВАЛОС 5 Un* предназначена для использования в больших домах. Способ отведения воды: универсальная.",
-                specifications: [
-                    { name: "Способ отведения воды", value: "Универсальная (2,28)" },
-                    { name: "Производительность", value: "900л/сут" },
-                    { name: "Залповый сброс", value: "320л" },
-                    { name: "Глубина подводящей трубы", value: "До 60 см" },
-                    { name: "Габаритные размеры Д*Ш*В", value: "1000*1000*2280" }
-                ]
-            },
-            {
-                id: 5,
-                name: "АКВАЛОС 7 Un*",
-                description: "Автономная канализация повышенной производительности",
-                price: "171 000 ₽",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 1200л/сут", "Залповый сброс: 500л", "Глубина подводящей трубы: до 60 см"],
-                category: "vertical",
-                badge: "Универсальная",
-                fullDescription: "Автономная канализация АКВАЛОС 7 Un* обладает повышенной производительностью. Способ отведения воды: универсальная.",
-                specifications: [
-                    { name: "Способ отведения воды", value: "Универсальная (2,28)" },
-                    { name: "Производительность", value: "1200л/сут" },
-                    { name: "Залповый сброс", value: "500л" },
-                    { name: "Глубина подводящей трубы", value: "До 60 см" },
-                    { name: "Габаритные размеры Д*Ш*В", value: "1100*1100*2280" }
-                ]
-            },
-            {
-                id: 6,
-                name: "АКВАЛОС 8 Un*",
-                description: "Профессиональная автономная канализация",
-                price: "181 000 ₽",
-                image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 1600л/сут", "Залповый сброс: 630л", "Глубина подводящей трубы: до 60 см"],
-                category: "vertical",
-                badge: "Универсальная",
-                fullDescription: "Профессиональная автономная канализация АКВАЛОС 8 Un* предназначена для объектов с повышенными требованиями.",
-                specifications: [
-                    { name: "Способ отведения воды", value: "Универсальная (2,28)" },
-                    { name: "Производительность", value: "1600л/сут" },
-                    { name: "Залповый сброс", value: "630л" },
-                    { name: "Глубина подводящей трубы", value: "До 60 см" },
-                    { name: "Габаритные размеры Д*Ш*В", value: "1200*1200*2280" }
-                ]
-            },
-            {
-                id: 7,
-                name: "АКВАЛОС 10 Un*",
-                description: "Промышленная автономная канализация",
-                price: "237 000 ₽",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 2000л/сут", "Залповый сброс: 800л", "Глубина подводящей трубы: до 60 см"],
-                category: "vertical",
-                badge: "Универсальная",
-                fullDescription: "Промышленная автономная канализация АКВАЛОС 10 Un* предназначена для коммерческих объектов и больших домовладений.",
-                specifications: [
-                    { name: "Способ отведения воды", value: "Универсальная (2,28)" },
-                    { name: "Производительность", value: "2000л/сут" },
-                    { name: "Залповый сброс", value: "800л" },
-                    { name: "Глубина подводящей трубы", value: "До 60 см" },
-                    { name: "Габаритные размеры Д*Ш*В", value: "1500*1500*2280" }
-                ]
-            },
-            {
-                id: 8,
-                name: "Горизонтальная станция АКВАЛОС 4",
-                description: "Горизонтальная автономная канализация",
-                price: "148 000 ₽",
-                image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 800 л/сут", "Залповый сброс: 200 л", "Глубина подводящей трубы: до 30 см"],
-                category: "horizontal",
-                badge: "Горизонтальная",
-                fullDescription: "Горизонтальная станция АКВАЛОС 4 предназначена для использования в частных домах и на дачах. Глубина подводящей трубы: до 30 см.",
-                specifications: [
-                    { name: "Глубина подводящей трубы", value: "До 30 см" },
-                    { name: "Производительность", value: "800 л/сут" },
-                    { name: "Залповый сброс", value: "200 л" },
-                    { name: "Габаритные размеры", value: "1620*1000*1300" }
-                ]
-            },
-            {
-                id: 9,
-                name: "Горизонтальная станция АКВАЛОС 5",
-                description: "Горизонтальная автономная канализация",
-                price: "158 000 ₽",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 900 л/сут", "Залповый сброс: 300 л", "Глубина подводящей трубы: до 30 см"],
-                category: "horizontal",
-                badge: "Горизонтальная",
-                fullDescription: "Горизонтальная станция АКВАЛОС 5 предназначена для использования в частных домах. Глубина подводящей трубы: до 30 см.",
-                specifications: [
-                    { name: "Глубина подводящей трубы", value: "До 30 см" },
-                    { name: "Производительность", value: "900 л/сут" },
-                    { name: "Залповый сброс", value: "300 л" },
-                    { name: "Габаритные размеры", value: "1820*1000*1300" }
-                ]
-            },
-            {
-                id: 10,
-                name: "Горизонтальная станция АКВАЛОС 7",
-                description: "Горизонтальная автономная канализация",
-                price: "194 000 ₽",
-                image: "https://images.unsplash.com/photo-1581094794358-1b3d2b48f54f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 1200 л/сут", "Залповый сброс: 550 л", "Глубина подводящей трубы: до 30 см"],
-                category: "horizontal",
-                badge: "Горизонтальная",
-                fullDescription: "Горизонтальная станция АКВАЛОС 7 предназначена для использования в загородных домах. Глубина подводящей трубы: до 30 см.",
-                specifications: [
-                    { name: "Глубина подводящей трубы", value: "До 30 см" },
-                    { name: "Производительность", value: "1200 л/сут" },
-                    { name: "Залповый сброс", value: "550 л" },
-                    { name: "Габаритные размеры", value: "2120*1000*1300" }
-                ]
-            },
-            {
-                id: 11,
-                name: "Горизонтальная станция АКВАЛОС 10",
-                description: "Горизонтальная автономная канализация",
-                price: "246 000 ₽",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 2000 л/сут", "Залповый сброс: 800 л", "Глубина подводящей трубы: до 30 см"],
-                category: "horizontal",
-                badge: "Горизонтальная",
-                fullDescription: "Горизонтальная станция АКВАЛОС 10 предназначена для использования в больших домах и коммерческих объектах. Глубина подводящей трубы: до 30 см.",
-                specifications: [
-                    { name: "Глубина подводящей трубы", value: "До 30 см" },
-                    { name: "Производительность", value: "2000 л/сут" },
-                    { name: "Залповый сброс", value: "800 л" },
-                    { name: "Габаритные размеры", value: "2120*1260*1570" }
-                ]
-            },
-            {
-                id: 12,
-                name: "АКВАЛОС ПРЕМИУМ 15",
-                description: "Элитная автономная канализация для резиденций",
+                name: "AQUALUX ELITE SIGNATURE",
+                description: "Система для элитных загородных резиденций",
                 price: "10 000 000 ₽",
-                image: "https://images.unsplash.com/photo-1600585154340-6f09c190bafe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-                features: ["Производительность: 5000 л/сут", "Залповый сброс: 2000 л", "Полная автоматизация"],
+                image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+                features: ["Производительность: 8000л/сут", "Бесшумная работа", "Интеграция в умный дом"],
                 category: "premium",
                 badge: "ПРЕМИУМ",
-                fullDescription: "АКВАЛОС ПРЕМИУМ 15 - это элитная автономная канализационная система для загородных резиденций и коммерческих объектов высшего класса. Полностью автоматизированная система с удаленным мониторингом и управлением.",
+                fullDescription: "AQUALUX ELITE SIGNATURE создана для владельцев элитной недвижимости, ценящих безупречное качество и современные технологии. Бесшумная работа и полная интеграция в систему умного дома.",
                 specifications: [
-                    { name: "Производительность", value: "5000 л/сут" },
-                    { name: "Залповый сброс", value: "2000 л" },
-                    { name: "Степень очистки", value: "99.8%" },
-                    { name: "Управление", value: "Удаленное через приложение" },
-                    { name: "Гарантия", value: "10 лет" },
-                    { name: "Обслуживание", value: "VIP сервис 24/7" }
+                    { name: "Производительность", value: "8000 л/сут" },
+                    { name: "Уровень шума", value: "Менее 25 дБ" },
+                    { name: "Интеграция", value: "Умный дом + приложение" },
+                    { name: "Гарантия", value: "15 лет" },
+                    { name: "Обслуживание", value: "VIP сервис" }
                 ]
             }
         ];
 
-        // Остальной JavaScript код остается таким же, как в предыдущей версии
-        // (функции initBaseFunctionality, initCatalog, initAnimations и т.д.)
-        // Для экономии места я не буду дублировать весь JavaScript код
-        // В реальном проекте нужно сохранить всю JavaScript логику из предыдущей версии
-
-        // Базовая функциональность
-        function initBaseFunctionality() {
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
             // Скрытие анимации загрузки
             const loadingAnimation = document.getElementById('loadingAnimation');
             if (loadingAnimation) {
                 setTimeout(() => {
                     loadingAnimation.classList.add('hidden');
-                }, 1000);
+                }, 2000);
             }
             
-            // Мобильное меню
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const mobileNav = document.getElementById('mobileNav');
+            // Инициализация каталога
+            initCatalog();
             
-            if (mobileMenuBtn && mobileNav) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    mobileNav.classList.toggle('active');
-                    
-                    // Анимация иконки меню
-                    const icon = mobileMenuBtn.querySelector('i');
-                    if (mobileNav.classList.contains('active')) {
-                        icon.className = 'fas fa-times';
-                        if (typeof gsap !== 'undefined') {
-                            gsap.fromTo(mobileNav, {
-                                opacity: 0,
-                                y: -20
-                            }, {
-                                opacity: 1,
-                                y: 0,
-                                duration: 0.3,
-                                ease: "power2.out"
-                            });
-                        }
-                    } else {
-                        icon.className = 'fas fa-bars';
-                    }
-                });
-            }
+            // Инициализация счетчиков
+            initCounters();
             
-            // Плавная прокрутка
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        // Нативная плавная прокрутка
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 70;
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Закрытие мобильного меню после клика
-                        if (mobileNav) {
-                            mobileNav.classList.remove('active');
-                            if (mobileMenuBtn) {
-                                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
-                            }
-                        }
-                    }
-                });
-            });
-            
-            // Переключение темы
-            const themeToggle = document.getElementById('themeToggle');
-            const themeIcon = document.getElementById('themeIcon');
-            let isDarkTheme = localStorage.getItem('darkTheme') === 'true';
-            
-            function applyTheme() {
-                if (isDarkTheme) {
-                    document.body.classList.add('dark-theme');
-                    if (themeIcon) themeIcon.className = 'fas fa-sun';
-                } else {
-                    document.body.classList.remove('dark-theme');
-                    if (themeIcon) themeIcon.className = 'fas fa-moon';
-                }
-            }
-            
-            function toggleTheme() {
-                isDarkTheme = !isDarkTheme;
-                localStorage.setItem('darkTheme', isDarkTheme);
-                applyTheme();
-                
-                // Анимация переключателя темы
-                if (themeToggle && typeof gsap !== 'undefined') {
-                    gsap.fromTo(themeToggle, {
-                        scale: 1
-                    }, {
-                        scale: 1.2,
-                        duration: 0.2,
-                        yoyo: true,
-                        repeat: 1
-                    });
-                }
-            }
-            
-            if (themeToggle && themeIcon) {
-                themeToggle.addEventListener('click', toggleTheme);
-                applyTheme();
-            }
-            
-            // Модальное окно
-            const catalogBtn = document.getElementById('catalogBtn');
-            const closeModal = document.getElementById('closeModal');
-            
-            if (catalogBtn) {
-                catalogBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    openModal('modal');
-                });
-            }
-            
-            if (closeModal) {
-                closeModal.addEventListener('click', closeCurrentModal);
-            }
-            
-            // Закрытие по клику вне модального окна
-            document.addEventListener('click', (e) => {
-                if (currentModal && e.target === currentModal) {
-                    closeCurrentModal();
-                }
-            });
-            
-            // Формы
-            const contactForm = document.getElementById('contact-form');
-            const quickForm = document.getElementById('quick-form');
-            
-            // Обработка формы обратной связи
-            if (contactForm) {
-                contactForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    
-                    // Получаем данные формы
-                    const data = {
-                        name: document.getElementById('name').value,
-                        phone: document.getElementById('phone').value,
-                        location: document.getElementById('location').value,
-                        message: document.getElementById('message').value
-                    };
-                    
-                    // В реальном приложении здесь будет отправка на сервер
-                    console.log('Данные формы обратной связи:', data);
-                    
-                    // Имитация отправки
-                    setTimeout(() => {
-                        contactForm.reset();
-                        showNotification("Заявка отправлена! Мы свяжемся с вами в ближайшее время.");
-                    }, 500);
-                });
-            }
-            
-            // Обработка формы быстрой консультации
-            if (quickForm) {
-                quickForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    
-                    // Получаем данные формы
-                    const data = {
-                        name: document.getElementById('quick-name').value,
-                        phone: document.getElementById('quick-phone').value,
-                        location: document.getElementById('quick-location').value
-                    };
-                    
-                    // В реальном приложении здесь будет отправка на сервер
-                    console.log('Данные формы быстрой консультации:', data);
-                    
-                    // Имитация отправки
-                    setTimeout(() => {
-                        quickForm.reset();
-                        closeCurrentModal();
-                        showNotification("Заявка на консультацию отправлена! Мы перезвоним вам в течение 15 минут.");
-                    }, 500);
-                });
-            }
-            
-            // Социальные сети - открытие в новом окне
-            document.querySelectorAll('.social-links a').forEach(link => {
-                link.setAttribute('target', '_blank');
-                link.setAttribute('rel', 'noopener noreferrer');
-            });
-            
-            // Телефонный номер
-            document.querySelectorAll('.phone').forEach(phoneElement => {
-                phoneElement.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    window.location.href = 'tel:+735321234567';
-                });
-            });
-            
-            // Закрытие мобильного меню при ресайзе
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 768 && mobileNav) {
-                    mobileNav.classList.remove('active');
-                    if (mobileMenuBtn) {
-                        mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
-                    }
-                }
-            });
-
-            // Обработка скролла для шапки
-            const header = document.getElementById('header');
-            
-            if (header) {
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 50) {
-                        header.classList.add('scrolled');
-                    } else {
-                        header.classList.remove('scrolled');
-                    }
-                });
-            }
-        }
+            // Инициализация базовой функциональности
+            initBaseFunctionality();
+        });
 
         // Инициализация каталога
         function initCatalog() {
@@ -2096,7 +1713,7 @@
                 productCard.innerHTML = `
                     <div class="product-img">
                         <img src="${product.image}" alt="${product.name}">
-                        ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                        <div class="product-badge">${product.badge}</div>
                     </div>
                     <div class="product-content">
                         <h3>${product.name}</h3>
@@ -2106,8 +1723,8 @@
                         </div>
                         <div class="product-price">${product.price}</div>
                         <div class="product-actions">
-                            <button class="btn" data-product-id="${product.id}">Подробнее</button>
-                            <button class="btn ${product.category === 'premium' ? 'btn-premium' : 'btn-outline'}" data-product-id="${product.id}">Заказать</button>
+                            <button class="btn" data-product-id="${product.id}">ПОДРОБНЕЕ</button>
+                            <button class="btn btn-premium" data-product-id="${product.id}">КОНСУЛЬТАЦИЯ</button>
                         </div>
                     </div>
                 `;
@@ -2116,12 +1733,6 @@
             
             // Инициализация фильтров каталога
             initCatalogFilters();
-            
-            // Инициализация обработчиков событий для кнопок товаров
-            initProductButtons();
-            
-            // Инициализация модального окна товара
-            initProductModal();
         }
         
         // Инициализация фильтров каталога
@@ -2178,226 +1789,6 @@
                 }
             });
         }
-        
-        // Инициализация обработчиков событий для кнопок товаров
-        function initProductButtons() {
-            const productCards = document.querySelectorAll('.product-card');
-            productCards.forEach(card => {
-                const buttons = card.querySelectorAll('.btn');
-                buttons.forEach(button => {
-                    button.addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        const productId = parseInt(button.getAttribute('data-product-id'));
-                        if (button.classList.contains('btn-outline') || button.classList.contains('btn-premium')) {
-                            // Заказ товара
-                            orderProduct(productId);
-                        } else {
-                            // Просмотр подробной информации
-                            viewProductDetails(productId);
-                        }
-                    });
-                });
-                
-                // Клик по карточке товара
-                card.addEventListener('click', () => {
-                    const productId = parseInt(card.querySelector('.btn').getAttribute('data-product-id'));
-                    viewProductDetails(productId);
-                });
-            });
-        }
-        
-        // Просмотр детальной информации о товаре
-        function viewProductDetails(productId) {
-            const product = products.find(p => p.id === productId);
-            if (product) {
-                const modal = document.getElementById('productModal');
-                const modalImage = document.getElementById('modalProductImage');
-                const modalName = document.getElementById('modalProductName');
-                const modalPrice = document.getElementById('modalProductPrice');
-                const modalDescription = document.getElementById('modalProductDescription');
-                const modalSpecs = document.getElementById('modalProductSpecs');
-                
-                if (!modal || !modalImage || !modalName || !modalPrice || !modalDescription || !modalSpecs) return;
-                
-                // Заполнение модального окна данными товара
-                modalImage.src = product.image;
-                modalImage.alt = product.name;
-                modalName.textContent = product.name;
-                modalPrice.textContent = product.price;
-                modalDescription.textContent = product.fullDescription;
-                
-                // Очистка и заполнение спецификаций
-                modalSpecs.innerHTML = '';
-                product.specifications.forEach(spec => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `
-                        <span class="spec-name">${spec.name}</span>
-                        <span class="spec-value">${spec.value}</span>
-                    `;
-                    modalSpecs.appendChild(li);
-                });
-                
-                // Анимация открытия модального окна
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-                
-                // Анимация появления контента в модальном окне
-                if (typeof gsap !== 'undefined') {
-                    gsap.fromTo('.product-modal-content', {
-                        scale: 0.8,
-                        opacity: 0
-                    }, {
-                        scale: 1,
-                        opacity: 1,
-                        duration: 0.3,
-                        ease: "back.out(1.7)"
-                    });
-                }
-            }
-        }
-        
-        // Заказ товара
-        function orderProduct(productId) {
-            const product = products.find(p => p.id === productId);
-            if (product) {
-                // Открытие модального окна заказа
-                openModal('modal');
-            }
-        }
-        
-        // Инициализация модального окна товара
-        function initProductModal() {
-            const modal = document.getElementById('productModal');
-            const closeButton = document.getElementById('productModalClose');
-            const orderButton = document.getElementById('modalProductOrder');
-            const consultButton = document.getElementById('modalProductConsult');
-            
-            if (!modal || !closeButton || !orderButton || !consultButton) return;
-            
-            // Закрытие модального окна
-            closeButton.addEventListener('click', () => {
-                closeProductModal();
-            });
-            
-            // Заказ товара из модального окна
-            orderButton.addEventListener('click', () => {
-                closeProductModal();
-                openModal('modal');
-            });
-            
-            // Консультация по товару
-            consultButton.addEventListener('click', () => {
-                closeProductModal();
-                openModal('modal');
-            });
-            
-            // Закрытие по клику вне модального окна
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    closeProductModal();
-                }
-            });
-            
-            // Закрытие по клавише Escape
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && modal.classList.contains('active')) {
-                    closeProductModal();
-                }
-            });
-        }
-
-        // Функция показа уведомления
-        function showNotification(message = "Сообщение отправлено успешно!") {
-            const notification = document.getElementById('notification');
-            if (!notification) return;
-            
-            notification.textContent = message;
-            notification.classList.add('show');
-            
-            // Анимация появления уведомления
-            if (typeof gsap !== 'undefined') {
-                gsap.fromTo(notification, {
-                    x: 150
-                }, {
-                    x: 0,
-                    duration: 0.5,
-                    ease: "back.out(1.7)"
-                });
-            }
-            
-            setTimeout(() => {
-                // Анимация скрытия уведомления
-                if (typeof gsap !== 'undefined') {
-                    gsap.to(notification, {
-                        x: 150,
-                        duration: 0.3,
-                        ease: "power2.in",
-                        onComplete: () => {
-                            notification.classList.remove('show');
-                        }
-                    });
-                } else {
-                    notification.classList.remove('show');
-                }
-            }, 3000);
-        }
-
-        // Инициализация при загрузке страницы
-        document.addEventListener('DOMContentLoaded', () => {
-            try {
-                initBaseFunctionality();
-                initCatalog();
-                
-                // Инициализация анимаций после небольшой задержки
-                setTimeout(() => {
-                    initCounters();
-                }, 100);
-            } catch (error) {
-                console.error('Ошибка инициализации:', error);
-                // Все равно скрываем анимацию загрузки при ошибке
-                const loadingAnimation = document.getElementById('loadingAnimation');
-                if (loadingAnimation) {
-                    loadingAnimation.classList.add('hidden');
-                }
-            }
-        });
-
-        // Улучшенная функция для анимации счетчика с GSAP
-        function animateCounter(element, start, end, duration) {
-            if (!element) return;
-            
-            const obj = { value: start };
-            if (typeof gsap !== 'undefined') {
-                gsap.to(obj, {
-                    value: end,
-                    duration: duration / 1000,
-                    ease: "power2.out",
-                    onUpdate: function() {
-                        if (element.id === 'clientsCounter') {
-                            element.textContent = Math.floor(obj.value) + '%';
-                        } else {
-                            element.textContent = Math.floor(obj.value).toLocaleString();
-                        }
-                    }
-                });
-            } else {
-                // Fallback если GSAP не загружен
-                let current = start;
-                const increment = (end - start) / (duration / 16);
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= end) {
-                        current = end;
-                        clearInterval(timer);
-                    }
-                    if (element.id === 'clientsCounter') {
-                        element.textContent = Math.floor(current) + '%';
-                    } else {
-                        element.textContent = Math.floor(current).toLocaleString();
-                    }
-                }, 16);
-            }
-        }
 
         // Функция для запуска счетчиков
         function initCounters() {
@@ -2406,82 +1797,160 @@
             const clientsCounter = document.getElementById('clientsCounter');
             
             if (yearsCounter && projectsCounter && clientsCounter) {
-                // Запускаем счетчики без ScrollTrigger для простоты
-                animateCounter(yearsCounter, 0, 15, 2000);
-                animateCounter(projectsCounter, 0, 1200, 2500);
-                animateCounter(clientsCounter, 0, 98, 1800);
+                // Запускаем счетчики
+                animateCounter(yearsCounter, 0, 12, 2500);
+                animateCounter(projectsCounter, 0, 150, 3000);
+                animateCounter(clientsCounter, 0, 120, 2800);
             }
         }
 
-        // Глобальные переменные для управления модальными окнами
-        let currentModal = null;
-
-        // Функции для работы с модальными окнами
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                currentModal = modal;
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-                
-                // Анимация открытия модального окна
-                if (typeof gsap !== 'undefined') {
-                    gsap.fromTo(modal.querySelector('.modal-content, .product-modal-content'), {
-                        scale: 0.8,
-                        opacity: 0
-                    }, {
-                        scale: 1,
-                        opacity: 1,
-                        duration: 0.3,
-                        ease: "back.out(1.7)"
-                    });
+        // Улучшенная функция для анимации счетчика
+        function animateCounter(element, start, end, duration) {
+            if (!element) return;
+            
+            let current = start;
+            const increment = (end - start) / (duration / 16);
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= end) {
+                    current = end;
+                    clearInterval(timer);
                 }
-            }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 16);
         }
 
-        function closeCurrentModal() {
-            if (currentModal) {
-                // Анимация закрытия модального окна
-                if (typeof gsap !== 'undefined') {
-                    gsap.to(currentModal.querySelector('.modal-content, .product-modal-content'), {
-                        scale: 0.8,
-                        opacity: 0,
-                        duration: 0.2,
-                        ease: "power2.in",
-                        onComplete: () => {
-                            currentModal.classList.remove('active');
-                            document.body.style.overflow = 'auto';
-                            currentModal = null;
+        // Базовая функциональность
+        function initBaseFunctionality() {
+            // Мобильное меню
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            if (mobileMenuBtn && mobileNav) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileNav.classList.toggle('active');
+                    
+                    // Анимация иконки меню
+                    const icon = mobileMenuBtn.querySelector('i');
+                    if (mobileNav.classList.contains('active')) {
+                        icon.className = 'fas fa-times';
+                    } else {
+                        icon.className = 'fas fa-bars';
+                    }
+                });
+            }
+            
+            // Плавная прокрутка
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Нативная плавная прокрутка
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - 80;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Закрытие мобильного меню после клика
+                        if (mobileNav) {
+                            mobileNav.classList.remove('active');
+                            if (mobileMenuBtn) {
+                                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                            }
                         }
-                    });
+                    }
+                });
+            });
+            
+            // Переключение темы
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            let isDarkTheme = localStorage.getItem('darkTheme') === 'true';
+            
+            function applyTheme() {
+                if (isDarkTheme) {
+                    document.body.classList.add('dark-theme');
+                    if (themeIcon) themeIcon.className = 'fas fa-sun';
                 } else {
-                    currentModal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                    currentModal = null;
+                    document.body.classList.remove('dark-theme');
+                    if (themeIcon) themeIcon.className = 'fas fa-moon';
                 }
             }
-        }
-
-        // Функция для закрытия модального окна товара
-        function closeProductModal() {
-            const modal = document.getElementById('productModal');
-            if (modal) {
-                // Анимация закрытия модального окна
-                if (typeof gsap !== 'undefined') {
-                    gsap.to(modal.querySelector('.product-modal-content'), {
-                        scale: 0.8,
-                        opacity: 0,
-                        duration: 0.2,
-                        ease: "power2.in",
-                        onComplete: () => {
-                            modal.classList.remove('active');
-                            document.body.style.overflow = 'auto';
-                        }
-                    });
-                } else {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
+            
+            function toggleTheme() {
+                isDarkTheme = !isDarkTheme;
+                localStorage.setItem('darkTheme', isDarkTheme);
+                applyTheme();
+            }
+            
+            if (themeToggle && themeIcon) {
+                themeToggle.addEventListener('click', toggleTheme);
+                applyTheme();
+            }
+            
+            // Обработка формы
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    // Получаем данные формы
+                    const data = {
+                        name: document.getElementById('name').value,
+                        phone: document.getElementById('phone').value,
+                        location: document.getElementById('location').value,
+                        message: document.getElementById('message').value
+                    };
+                    
+                    // В реальном приложении здесь будет отправка на сервер
+                    console.log('Данные формы:', data);
+                    
+                    // Имитация отправки
+                    setTimeout(() => {
+                        contactForm.reset();
+                        alert("Ваш запрос отправлен! Наш специалист свяжется с вами в ближайшее время.");
+                    }, 500);
+                });
+            }
+            
+            // Социальные сети - открытие в новом окне
+            document.querySelectorAll('.social-links a').forEach(link => {
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer');
+            });
+            
+            // Телефонный номер
+            document.querySelectorAll('.phone').forEach(phoneElement => {
+                phoneElement.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = 'tel:+74951234567';
+                });
+            });
+            
+            // Закрытие мобильного меню при ресайзе
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768 && mobileNav) {
+                    mobileNav.classList.remove('active');
+                    if (mobileMenuBtn) {
+                        mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                    }
                 }
+            });
+
+            // Обработка скролла для шапки
+            const header = document.getElementById('header');
+            if (header) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
             }
         }
     </script>
