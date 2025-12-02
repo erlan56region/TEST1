@@ -1462,7 +1462,7 @@
         <div class="container">
             <div class="about">
                 <div class="about-img">
-                    <img src="https://static.tildacdn.com/stor3931-3032-4137-b631-393138316364/42248305.jpg" alt="О компании">
+                    <img src="https://disk.yandex.ru/i/52TVxS0Uk0hZPQ" alt="О компании">
                 </div>
                 <div class="about-content">
                     <h2>О компании</h2>
