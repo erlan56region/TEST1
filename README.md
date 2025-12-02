@@ -1,5 +1,4 @@
-Разработка 5.0
-
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -8,9 +7,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Profit - Автономные канализации Аквалос</title>
-    <link rel="stylesheet" href="https://disk.yandex.ru/i/52TVxS0Uk0hZPQ">
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Подключение шрифтов -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP для анимаций -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <style>
@@ -1462,7 +1464,7 @@
         <div class="container">
             <div class="about">
                 <div class="about-img">
-                    <a href="https://ibb.co/8nvK7yXH"><img src="https://i.ibb.co/JW6BsYC9/5ef00457-f0df-473b-8414-77913615df0f-1.png" alt="5ef00457-f0df-473b-8414-77913615df0f-1" border="0"></a>"
+                    <img src="https://i.ibb.co/JW6BsYC9/5ef00457-f0df-473b-8414-77913615df0f-1.png" alt="О компании">
                 </div>
                 <div class="about-content">
                     <h2>О компании</h2>
@@ -1584,7 +1586,7 @@
                         <li>ИНН: 561001001</li>
                         <li>+7 (3532) 123-45-67</li>
                         <li>info@rahmetov-orenburg.ru</li>
-                        <li>460053, Оренбургская Область, г Оренбург, ул Поляничко, д. 10, кв. 189/li>
+                        <li>460053, Оренбургская Область, г Оренбург, ул Поляничко, д. 10, кв. 189</li>
                         <li>Работаем по Оренбургу и области</li>
                     </ul>
                 </div>
