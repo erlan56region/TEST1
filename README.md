@@ -7,8 +7,8 @@
     <meta name="theme-color" content="#2c5aa0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>ИП Рахметов А.К. - Автономные канализации Аквалос</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Profit - Автономные канализации Аквалос</title>
+    <link rel="stylesheet" href="https://disk.yandex.ru/i/52TVxS0Uk0hZPQ">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -1247,7 +1247,7 @@
                 <div class="logo">
                     <i class="fas fa-water"></i>
                     <div>
-                        ИП Рахметов А.К.
+                        PROFIT
                         <div class="logo-subtitle">Автономные канализации</div>
                     </div>
                 </div>
@@ -1466,7 +1466,7 @@
                 </div>
                 <div class="about-content">
                     <h2>О компании</h2>
-                    <p><strong>ИП Рахметов А.К.</strong> (ИНН 561902398552) специализируется на установке автономных канализационных систем с 2010 года. Мы являемся официальными дилерами систем Аквалос в Оренбурге и Оренбургской области.</p>
+                    <p><strong>PROFIT</strong> (ИНН 561902398552) специализируется на установке автономных канализационных систем с 2010 года. Мы являемся официальными дилерами систем Аквалос в Оренбурге и Оренбургской области.</p>
                     <p>Наша команда состоит из опытных специалистов, которые используют современное оборудование и материалы для обеспечения высокого качества работ.</p>
                     <div class="stats">
                         <div class="stat-item">
@@ -1496,7 +1496,7 @@
                     <h3>Контактная информация</h3>
                     <div class="contact-item">
                         <i class="fas fa-user-tie"></i>
-                        <div><strong>ИП Рахметов А.К.</strong></div>
+                        <div><strong>PROFIT</strong></div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-id-card"></i>
@@ -1580,7 +1580,7 @@
                 <div class="footer-column">
                     <h3>Контакты</h3>
                     <ul>
-                        <li><strong>ИП Рахметов А.К.</strong></li>
+                        <li><strong>PROFIT</strong></li>
                         <li>ИНН: 561902398552</li>
                         <li>+7 (3532) 123-45-67</li>
                         <li>info@rahmetov-orenburg.ru</li>
@@ -1590,7 +1590,7 @@
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2025 ИП Рахметов А.К. (ИНН 561902398552). Все права защищены. Обслуживаем Оренбург и Оренбургскую область.
+                &copy; 2025 PROFIT (ИНН 561902398552). Все права защищены. Обслуживаем Оренбург и Оренбургскую область.
             </div>
         </div>
     </footer>
