@@ -1269,7 +1269,7 @@
                 </nav>
                 <div class="phone">
                     <i class="fas fa-phone-alt"></i>
-                    +7 (3532) 123-45-67
+                    +7 (922) 897-72-17
                 </div>
             </div>
             <nav class="mobile-nav" id="mobileNav">
@@ -1512,11 +1512,11 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
-                        <div>+7 (3532) 123-45-67</div>
+                        <div>+7 (922) 897-72-17</div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <div>info@rahmetov-orenburg.ru</div>
+                        <div>INFO@PROFIT-AFOSS.RU</div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
@@ -1529,7 +1529,7 @@
                     <div class="social-links">
                         <a href="https://vk.com" target="_blank"><i class="fab fa-vk"></i></a>
                         <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
-                        <a href="https://wa.me/735321234567" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/79228977217" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
@@ -1586,8 +1586,8 @@
                     <ul>
                         <li><strong>PROFIT</strong></li>
                         <li>ИНН: 561001001</li>
-                        <li>+7 (3532) 123-45-67</li>
-                        <li>info@rahmetov-orenburg.ru</li>
+                        <li>+7 (922) 897-72-17</li>
+                        <li>INFO@PROFIT-AFOSS.RU</li>
                         <li>460053, Оренбургская Область, г Оренбург, ул Поляничко, д. 10, кв. 189</li>
                         <li>Работаем по Оренбургу и области</li>
                     </ul>
