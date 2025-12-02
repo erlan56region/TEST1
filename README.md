@@ -1462,7 +1462,7 @@
         <div class="container">
             <div class="about">
                 <div class="about-img">
-                    <img src="https://disk.yandex.ru/i/52TVxS0Uk0hZPQ" alt="О компании">
+                    <img src="https://ibb.co/8nvK7yXH" alt="О компании">
                 </div>
                 <div class="about-content">
                     <h2>О компании</h2>
