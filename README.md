@@ -1,4 +1,4 @@
-Разработка 4.0
+Разработка 5.0
 
 <html lang="ru">
 <head>
@@ -1462,7 +1462,7 @@
         <div class="container">
             <div class="about">
                 <div class="about-img">
-                    <img src="https://ibb.co/8nvK7yXH" alt="О компании">
+                    <img src="<a href="https://ibb.co/8nvK7yXH"><img src="https://i.ibb.co/JW6BsYC9/5ef00457-f0df-473b-8414-77913615df0f-1.png" alt="5ef00457-f0df-473b-8414-77913615df0f-1" border="0"></a>" alt="О компании">
                 </div>
                 <div class="about-content">
                     <h2>О компании</h2>
